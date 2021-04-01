@@ -1,0 +1,4365 @@
+
+bb_init()
+    conn:
+    proto_major = 7
+    proto_minor = 22
+    async_read = 1
+    max_write = 131072
+    max_readahead = 131072
+    capable = 00000ffb
+    want = 00000010
+    max_background = 0
+    congestion_threshold = 0
+    context:
+    fuse = 09f4b450
+    uid = 0
+    gid = 0
+    pid = 0
+    private_data = 09f4a008
+    logfile = 09f4b100
+    rootdir = /home/user/Desktop/fuse/example/rootdir
+    umask = 00000
+
+bb_opendir(path="/", fi=0xb7328134)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/", fpath = "/home/user/Desktop/fuse/example/rootdir/"
+    opendir returned 0x0xb6a006e8
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb6a006e8
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/.Trash", statbuf=0xb7328104)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/.Trash", fpath = "/home/user/Desktop/fuse/example/rootdir/.Trash"
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+    lstat returned -1
+    ERROR lstat: No such file or directory
+
+bb_getattr(path="/.Trash-1000", statbuf=0xb69ff104)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/.Trash-1000", fpath = "/home/user/Desktop/fuse/example/rootdir/.Trash-1000"
+    si:
+    st_dev = 2049
+    st_ino = 289912
+    st_mode = 040700
+    st_nlink = 4
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x5ce56042
+    st_mtime = 0x5ce56042
+    st_ctime = 0x5ce56042
+    lstat returned 0
+
+bb_getattr(path="/.Trash-1000/files", statbuf=0xb7328104)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/.Trash-1000/files", fpath = "/home/user/Desktop/fuse/example/rootdir/.Trash-1000/files"
+    si:
+    st_dev = 2049
+    st_ino = 289915
+    st_mode = 040700
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x5cf019a3
+    st_mtime = 0x5cf016f2
+    st_ctime = 0x5cf016f2
+    lstat returned 0
+
+bb_getattr(path="/.xdg-volume-info", statbuf=0xb7328104)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/.xdg-volume-info", fpath = "/home/user/Desktop/fuse/example/rootdir/.xdg-volume-info"
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+    lstat returned -1
+    ERROR lstat: No such file or directory
+
+bb_opendir(path="/.Trash-1000/files", fi=0xb69ff134)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/.Trash-1000/files", fpath = "/home/user/Desktop/fuse/example/rootdir/.Trash-1000/files"
+    opendir returned 0x0xb6000720
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb6000720
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/autorun.inf", statbuf=0xb5fff104)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/autorun.inf", fpath = "/home/user/Desktop/fuse/example/rootdir/autorun.inf"
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+    lstat returned -1
+    ERROR lstat: No such file or directory
+
+bb_readdir(path="/.Trash-1000/files", buf=0xb60005c8, filler=0xb76d2e80, offset=0, fi=0xb7328124)
+    readdir returned 0x0xb600073c
+calling filler with name test1.c
+calling filler with name file1.txt
+calling filler with name .
+calling filler with name ..
+calling filler with name file2.txt
+calling filler with name file1.2.txt
+    fi:
+    flags = 0x00000000
+    fh_old = 0xb6000720
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb6000720
+    lock_owner = 0x0000000000000000
+
+bb_readdir(path="/", buf=0xb6a00590, filler=0xb76d2e80, offset=0, fi=0xb55ff124)
+    readdir returned 0x0xb6a00704
+calling filler with name test1.c~
+calling filler with name file1.txt
+calling filler with name file4.txt
+calling filler with name bogus.txt~
+calling filler with name .
+calling filler with name file4.txt~
+calling filler with name file1.txt~
+calling filler with name ..
+calling filler with name file2.txt
+calling filler with name .Trash-1000
+    fi:
+    flags = 0x00000000
+    fh_old = 0xb6a006e8
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb6a006e8
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/.Trash-1000/files/test1.c", statbuf=0xb69ff104)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/.Trash-1000/files/test1.c", fpath = "/home/user/Desktop/fuse/example/rootdir/.Trash-1000/files/test1.c"
+    si:
+    st_dev = 2049
+    st_ino = 289927
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 577
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x5ce5674a
+    st_mtime = 0x5ce56731
+    st_ctime = 0x5ce56750
+    lstat returned 0
+
+bb_getattr(path="/.Trash-1000/files/file1.txt", statbuf=0xb69ff104)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/.Trash-1000/files/file1.txt", fpath = "/home/user/Desktop/fuse/example/rootdir/.Trash-1000/files/file1.txt"
+    si:
+    st_dev = 2049
+    st_ino = 289877
+    st_mode = 0100644
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 8192
+    st_blksize = 4096
+    st_blocks = 16
+    st_atime = 0x5ce5486c
+    st_mtime = 0x5ce51d66
+    st_ctime = 0x5ce56042
+    lstat returned 0
+
+bb_getattr(path="/test1.c~", statbuf=0xb5fff104)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/test1.c~", fpath = "/home/user/Desktop/fuse/example/rootdir/test1.c~"
+    si:
+    st_dev = 2049
+    st_ino = 289937
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 529
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x5ce5670f
+    st_mtime = 0x5ce5670f
+    st_ctime = 0x5ce56731
+    lstat returned 0
+
+bb_getattr(path="/file1.txt", statbuf=0xb5fff104)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/file1.txt", fpath = "/home/user/Desktop/fuse/example/rootdir/file1.txt"
+    si:
+    st_dev = 2049
+    st_ino = 290152
+    st_mode = 0100644
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 8192
+    st_blksize = 4096
+    st_blocks = 16
+    st_atime = 0x5cf10c8e
+    st_mtime = 0x5cf10d87
+    st_ctime = 0x5cf10d87
+    lstat returned 0
+
+bb_getattr(path="/file4.txt", statbuf=0xb5fff104)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/file4.txt", fpath = "/home/user/Desktop/fuse/example/rootdir/file4.txt"
+    si:
+    st_dev = 2049
+    st_ino = 290156
+    st_mode = 0100600
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 8192
+    st_blksize = 4096
+    st_blocks = 16
+    st_atime = 0x5cf1180c
+    st_mtime = 0x5cf01d85
+    st_ctime = 0x5cf1180c
+    lstat returned 0
+
+bb_getattr(path="/bogus.txt~", statbuf=0xb5fff104)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/bogus.txt~", fpath = "/home/user/Desktop/fuse/example/rootdir/bogus.txt~"
+
+bb_getattr(path="/.Trash-1000/files/file2.txt", statbuf=0xb69ff104)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/.Trash-1000/files/file2.txt", fpath = "/home/user/Desktop/fuse/example/rootdir/.Trash-1000/files/file2.txt"
+    si:
+    st_dev = 2049
+    st_ino = 289878
+    st_mode = 0100644
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 8192
+    st_blksize = 4096
+    st_blocks = 16
+    st_atime = 0x5ce5486c
+    st_mtime = 0x5ce51d66
+    st_ctime = 0x5ce56042
+    lstat returned 0
+
+bb_getattr(path="/.Trash-1000/files/file1.2.txt", statbuf=0xb69ff104)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/.Trash-1000/files/file1.2.txt", fpath = "/home/user/Desktop/fuse/example/rootdir/.Trash-1000/files/file1.2.txt"
+    si:
+    st_dev = 2049
+    st_ino = 290124
+    st_mode = 0100644
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 16384
+    st_blksize = 4096
+    st_blocks = 32
+    st_atime = 0x5cf016c8
+    st_mtime = 0x5cf016f0
+    st_ctime = 0x5cf016f2
+    lstat returned 0
+    si:
+
+bb_getattr(path="/.Trash-1000/info", statbuf=0xb55ff104)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/.Trash-1000/info", fpath = "/home/user/Desktop/fuse/example/rootdir/.Trash-1000/info"
+    si:
+    st_dev = 2049
+    st_ino = 289914
+    st_mode = 040700
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x5ce56042
+    st_mtime = 0x5cf016f2
+    st_ctime = 0x5cf016f2
+    lstat returned 0
+
+bb_releasedir(path="/.Trash-1000/files", fi=0xb69ff134)
+    fi:
+    flags = 0x00000000
+    fh_old = 0xb6000720
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb6000720
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/.Trash-1000/info/file1.2.txt.trashinfo", statbuf=0xb69ff104)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/.Trash-1000/info/file1.2.txt.trashinfo", fpath = "/home/user/Desktop/fuse/example/rootdir/.Trash-1000/info/file1.2.txt.trashinfo"
+    si:
+    st_dev = 2049
+    st_ino = 290133
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 4096
+    st_blocks = 0
+    st_atime = 0x5cf016f3
+    st_mtime = 0x5cf016f2
+    st_ctime = 0x5cf016f2
+    lstat returned 0
+
+bb_open(path"/.Trash-1000/info/file1.2.txt.trashinfo", fi=0xb69ff1c0)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/.Trash-1000/info/file1.2.txt.trashinfo", fpath = "/home/user/Desktop/fuse/example/rootdir/.Trash-1000/info/file1.2.txt.trashinfo"
+    open returned 6
+    fi:
+    flags = 0x00008000
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000006
+    lock_owner = 0x0000000000000000
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/.Trash-1000/info/file1.2.txt.trashinfo", fpath = "/home/user/Desktop/fuse/example/rootdir/.Trash-1000/info/file1.2.txt.trashinfo"
+
+bb_read(path="/.Trash-1000/info/file1.2.txt.trashinfo", buf=0xb6000888, size=4096, offset=0, fi=0xb69ff1b0)
+    fi:
+    flags = 0x00008000
+    fh_old = 0x00000006
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000006
+    lock_owner = 0x0000000000000000
+    pread returned 0
+    st_dev = 2049
+    st_ino = 289813
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 11
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x5ce455e6
+    st_mtime = 0x5ce455cd
+    st_ctime = 0x5ce45785
+    lstat returned 0
+
+bb_flush(path="/.Trash-1000/info/file1.2.txt.trashinfo", fi=0xb69ff1c0)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x00000006
+    writepage = 0
+
+bb_getattr(path="/file4.txt~", statbuf=0xb5fff104)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/file4.txt~", fpath = "/home/user/Desktop/fuse/example/rootdir/file4.txt~"
+    si:
+    st_dev = 2049
+    st_ino = 290160
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 4096
+    st_blocks = 0
+    st_atime = 0x5cf10ca9
+    st_mtime = 0x5cf10c9c
+    st_ctime = 0x5cf10cb5
+    lstat returned 0
+
+bb_getattr(path="/file1.txt~", statbuf=0xb5fff104)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/file1.txt~", fpath = "/home/user/Desktop/fuse/example/rootdir/file1.txt~"
+    si:
+    st_dev = 2049
+    st_ino = 289828
+    st_mode = 0100644
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4097
+    st_blksize = 4096
+    st_blocks = 16
+    st_atime = 0x5ce4573c
+    st_mtime = 0x5ce4573b
+    st_ctime = 0x5ce45751
+    lstat returned 0
+
+bb_getattr(path="/file2.txt", statbuf=0xb5fff104)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/file2.txt", fpath = "/home/user/Desktop/fuse/example/rootdir/file2.txt"
+    si:
+    st_dev = 2049
+    st_ino = 290153
+    st_mode = 0100644
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 8192
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000006
+    lock_owner = 0x6f47e6d5853334dd
+    st_blksize = 4096
+    st_blocks = 16
+    st_atime = 0x5cf10c8e
+    st_mtime = 0x5cf10d87
+    st_ctime = 0x5cf10d87
+    lstat returned 0
+
+bb_release(path="/.Trash-1000/info/file1.2.txt.trashinfo", fi=0xb69ff1b0)
+    fi:
+    flags = 0x00008000
+    fh_old = 0x00000006
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000006
+    lock_owner = 0x0000000000000000
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/.Trash-1000/info/file1.2.txt.trashinfo", fpath = "/home/user/Desktop/fuse/example/rootdir/.Trash-1000/info/file1.2.txt.trashinfo"
+    open returned 7
+    close returned 0
+    close returned 0
+
+bb_getattr(path="/.Trash-1000/info/file1.txt.trashinfo", statbuf=0xb5fff104)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/.Trash-1000/info/file1.txt.trashinfo", fpath = "/home/user/Desktop/fuse/example/rootdir/.Trash-1000/info/file1.txt.trashinfo"
+    si:
+    st_dev = 2049
+    st_ino = 289917
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 4096
+    st_blocks = 0
+    st_atime = 0x5cefdf83
+    st_mtime = 0x5ce56042
+    st_ctime = 0x5ce56042
+    lstat returned 0
+
+bb_releasedir(path="/", fi=0xb5fff134)
+    fi:
+    flags = 0x00000000
+    fh_old = 0xb6a006e8
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb6a006e8
+    lock_owner = 0x0000000000000000
+
+bb_opendir(path="/", fi=0xb5fff134)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/", fpath = "/home/user/Desktop/fuse/example/rootdir/"
+    opendir returned 0x0xb56006e8
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb56006e8
+    lock_owner = 0x0000000000000000
+
+bb_readdir(path="/", buf=0xb5600590, filler=0xb76d2e80, offset=0, fi=0xb5fff124)
+    readdir returned 0x0xb5600704
+calling filler with name test1.c~
+calling filler with name file1.txt
+calling filler with name file4.txt
+calling filler with name bogus.txt~
+calling filler with name .
+calling filler with name file4.txt~
+calling filler with name file1.txt~
+calling filler with name ..
+calling filler with name file2.txt
+calling filler with name .Trash-1000
+    fi:
+    flags = 0x00000000
+    fh_old = 0xb56006e8
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb56006e8
+    lock_owner = 0x0000000000000000
+
+bb_open(path"/.Trash-1000/info/file1.txt.trashinfo", fi=0xb5fff1c0)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/.Trash-1000/info/file1.txt.trashinfo", fpath = "/home/user/Desktop/fuse/example/rootdir/.Trash-1000/info/file1.txt.trashinfo"
+    open returned 6
+    fi:
+    flags = 0x00008000
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000006
+    lock_owner = 0x0000000000000000
+
+bb_releasedir(path="/", fi=0xb5fff134)
+    fi:
+    flags = 0x00000000
+    fh_old = 0xb56006e8
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb56006e8
+    lock_owner = 0x0000000000000000
+
+bb_opendir(path="/", fi=0xb5fff134)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/", fpath = "/home/user/Desktop/fuse/example/rootdir/"
+    opendir returned 0x0xb56006e8
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/.Trash-1000/info/file1.txt.trashinfo", fpath = "/home/user/Desktop/fuse/example/rootdir/.Trash-1000/info/file1.txt.trashinfo"
+
+bb_read(path="/.Trash-1000/info/file1.txt.trashinfo", buf=0xb6000888, size=4096, offset=0, fi=0xb69ff1b0)
+    fi:
+    flags = 0x00008000
+    fh_old = 0x00000006
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000006
+    lock_owner = 0x0000000000000000
+    pread returned 0
+
+bb_flush(path="/.Trash-1000/info/file1.txt.trashinfo", fi=0xb69ff1c0)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x00000006
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000006
+    lock_owner = 0x6f47e6d5853334dd
+
+bb_release(path="/.Trash-1000/info/file1.txt.trashinfo", fi=0xb69ff1b0)
+    fi:
+    flags = 0x00008000
+    fh_old = 0x00000006
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000006
+    lock_owner = 0x0000000000000000
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/.Trash-1000/info/file1.txt.trashinfo", fpath = "/home/user/Desktop/fuse/example/rootdir/.Trash-1000/info/file1.txt.trashinfo"
+    open returned 7
+    close returned 0
+    close returned 0
+
+bb_getattr(path="/.Trash-1000/info/file2.txt.trashinfo", statbuf=0xb55ff104)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/.Trash-1000/info/file2.txt.trashinfo", fpath = "/home/user/Desktop/fuse/example/rootdir/.Trash-1000/info/file2.txt.trashinfo"
+    si:
+    st_dev = 2049
+    st_ino = 289919
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 4096
+    st_blocks = 0
+    st_atime = 0x5cefdf83
+    st_mtime = 0x5ce56042
+    st_ctime = 0x5ce56042
+    lstat returned 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb56006e8
+    lock_owner = 0x0000000000000000
+
+bb_readdir(path="/", buf=0xb5600590, filler=0xb76d2e80, offset=0, fi=0xb5fff124)
+    readdir returned 0x0xb5600704
+calling filler with name test1.c~
+calling filler with name file1.txt
+calling filler with name file4.txt
+calling filler with name bogus.txt~
+calling filler with name .
+calling filler with name file4.txt~
+calling filler with name file1.txt~
+calling filler with name ..
+calling filler with name file2.txt
+calling filler with name .Trash-1000
+    fi:
+    flags = 0x00000000
+    fh_old = 0xb56006e8
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb56006e8
+    lock_owner = 0x0000000000000000
+
+bb_open(path"/.Trash-1000/info/file2.txt.trashinfo", fi=0xb69ff1c0)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/.Trash-1000/info/file2.txt.trashinfo", fpath = "/home/user/Desktop/fuse/example/rootdir/.Trash-1000/info/file2.txt.trashinfo"
+    open returned 6
+    fi:
+    flags = 0x00008000
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000006
+    lock_owner = 0x0000000000000000
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/.Trash-1000/info/file2.txt.trashinfo", fpath = "/home/user/Desktop/fuse/example/rootdir/.Trash-1000/info/file2.txt.trashinfo"
+
+bb_read(path="/.Trash-1000/info/file2.txt.trashinfo", buf=0xb6000a40, size=4096, offset=0, fi=0xb69ff1b0)
+    fi:
+    flags = 0x00008000
+    fh_old = 0x00000006
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000006
+    lock_owner = 0x0000000000000000
+    pread returned 0
+
+bb_flush(path="/.Trash-1000/info/file2.txt.trashinfo", fi=0xb69ff1c0)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x00000006
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000006
+    lock_owner = 0x6f47e6d5853334dd
+
+bb_getattr(path="/.Trash-1000/info/test1.c.trashinfo", statbuf=0xb69ff104)
+
+bb_releasedir(path="/", fi=0xb5fff134)
+    fi:
+    flags = 0x00000000
+    fh_old = 0xb56006e8
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb56006e8
+    lock_owner = 0x0000000000000000
+
+bb_opendir(path="/", fi=0xb55ff134)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/", fpath = "/home/user/Desktop/fuse/example/rootdir/"
+    opendir returned 0x0xb4c00638
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb4c00638
+    lock_owner = 0x0000000000000000
+
+bb_release(path="/.Trash-1000/info/file2.txt.trashinfo", fi=0xb73281b0)
+    fi:
+    flags = 0x00008000
+    fh_old = 0x00000006
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000006
+    lock_owner = 0x0000000000000000
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/.Trash-1000/info/file2.txt.trashinfo", fpath = "/home/user/Desktop/fuse/example/rootdir/.Trash-1000/info/file2.txt.trashinfo"
+    open returned 7
+    close returned 0
+    close returned 0
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/.Trash-1000/info/test1.c.trashinfo", fpath = "/home/user/Desktop/fuse/example/rootdir/.Trash-1000/info/test1.c.trashinfo"
+    si:
+    st_dev = 2049
+    st_ino = 289939
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 4096
+    st_blocks = 0
+    st_atime = 0x5cefdf83
+    st_mtime = 0x5ce56750
+    st_ctime = 0x5ce56750
+    lstat returned 0
+
+bb_open(path"/.Trash-1000/info/test1.c.trashinfo", fi=0xb69ff1c0)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/.Trash-1000/info/test1.c.trashinfo", fpath = "/home/user/Desktop/fuse/example/rootdir/.Trash-1000/info/test1.c.trashinfo"
+    open returned 6
+    fi:
+    flags = 0x00008000
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000006
+    lock_owner = 0x0000000000000000
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/.Trash-1000/info/test1.c.trashinfo", fpath = "/home/user/Desktop/fuse/example/rootdir/.Trash-1000/info/test1.c.trashinfo"
+
+bb_read(path="/.Trash-1000/info/test1.c.trashinfo", buf=0xb6000bf8, size=4096, offset=0, fi=0xb69ff1b0)
+    fi:
+    flags = 0x00008000
+    fh_old = 0x00000006
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000006
+    lock_owner = 0x0000000000000000
+    pread returned 0
+
+bb_flush(path="/.Trash-1000/info/test1.c.trashinfo", fi=0xb69ff1c0)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x00000006
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000006
+    lock_owner = 0x6f47e6d5853334dd
+
+bb_readdir(path="/", buf=0xb4c004e0, filler=0xb76d2e80, offset=0, fi=0xb5fff124)
+    readdir returned 0x0xb4c00654
+calling filler with name test1.c~
+calling filler with name file1.txt
+calling filler with name file4.txt
+calling filler with name bogus.txt~
+calling filler with name .
+calling filler with name file4.txt~
+calling filler with name file1.txt~
+calling filler with name ..
+calling filler with name file2.txt
+calling filler with name .Trash-1000
+    fi:
+    flags = 0x00000000
+    fh_old = 0xb4c00638
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb4c00638
+    lock_owner = 0x0000000000000000
+
+bb_release(path="/.Trash-1000/info/test1.c.trashinfo", fi=0xb55ff1b0)
+    fi:
+    flags = 0x00008000
+    fh_old = 0x00000006
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000006
+    lock_owner = 0x0000000000000000
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/.Trash-1000/info/test1.c.trashinfo", fpath = "/home/user/Desktop/fuse/example/rootdir/.Trash-1000/info/test1.c.trashinfo"
+    open returned 7
+    close returned 0
+    close returned 0
+
+bb_releasedir(path="/", fi=0xb5fff134)
+    fi:
+    flags = 0x00000000
+    fh_old = 0xb4c00638
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb4c00638
+    lock_owner = 0x0000000000000000
+
+bb_opendir(path="/", fi=0xb5fff134)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/", fpath = "/home/user/Desktop/fuse/example/rootdir/"
+    opendir returned 0x0xb56006e8
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb56006e8
+    lock_owner = 0x0000000000000000
+
+bb_readdir(path="/", buf=0xb5600590, filler=0xb76d2e80, offset=0, fi=0xb5fff124)
+    readdir returned 0x0xb5600704
+calling filler with name test1.c~
+calling filler with name file1.txt
+calling filler with name file4.txt
+calling filler with name bogus.txt~
+calling filler with name .
+calling filler with name file4.txt~
+calling filler with name file1.txt~
+calling filler with name ..
+calling filler with name file2.txt
+calling filler with name .Trash-1000
+    fi:
+    flags = 0x00000000
+    fh_old = 0xb56006e8
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb56006e8
+    lock_owner = 0x0000000000000000
+
+bb_releasedir(path="/", fi=0xb55ff134)
+    fi:
+    flags = 0x00000000
+    fh_old = 0xb56006e8
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb56006e8
+    lock_owner = 0x0000000000000000
+
+bb_opendir(path="/", fi=0xb69ff134)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/", fpath = "/home/user/Desktop/fuse/example/rootdir/"
+    opendir returned 0x0xb6000d00
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb6000d00
+    lock_owner = 0x0000000000000000
+
+bb_readdir(path="/", buf=0xb60005c8, filler=0xb76d2e80, offset=0, fi=0xb7328124)
+    readdir returned 0x0xb6000d1c
+calling filler with name test1.c~
+calling filler with name file1.txt
+calling filler with name file4.txt
+calling filler with name bogus.txt~
+calling filler with name .
+calling filler with name file4.txt~
+calling filler with name file1.txt~
+calling filler with name ..
+calling filler with name file2.txt
+calling filler with name .Trash-1000
+    fi:
+    flags = 0x00000000
+    fh_old = 0xb6000d00
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb6000d00
+    lock_owner = 0x0000000000000000
+
+bb_releasedir(path="/", fi=0xb5fff134)
+    fi:
+    flags = 0x00000000
+    fh_old = 0xb6000d00
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb6000d00
+    lock_owner = 0x0000000000000000
+
+bb_opendir(path="/", fi=0xb7328134)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/", fpath = "/home/user/Desktop/fuse/example/rootdir/"
+    opendir returned 0x0xb6a00ba8
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb6a00ba8
+    lock_owner = 0x0000000000000000
+
+bb_readdir(path="/", buf=0xb6a00590, filler=0xb76d2e80, offset=0, fi=0xb55ff124)
+    readdir returned 0x0xb6a00bc4
+calling filler with name test1.c~
+calling filler with name file1.txt
+calling filler with name file4.txt
+calling filler with name bogus.txt~
+calling filler with name .
+calling filler with name file4.txt~
+calling filler with name file1.txt~
+calling filler with name ..
+calling filler with name file2.txt
+calling filler with name .Trash-1000
+    fi:
+    flags = 0x00000000
+    fh_old = 0xb6a00ba8
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb6a00ba8
+    lock_owner = 0x0000000000000000
+
+bb_releasedir(path="/", fi=0xb5fff134)
+    fi:
+    flags = 0x00000000
+    fh_old = 0xb6a00ba8
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb6a00ba8
+    lock_owner = 0x0000000000000000
+
+bb_opendir(path="/", fi=0xb5fff134)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/", fpath = "/home/user/Desktop/fuse/example/rootdir/"
+    opendir returned 0x0xb56006e8
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb56006e8
+    lock_owner = 0x0000000000000000
+
+bb_readdir(path="/", buf=0xb5600590, filler=0xb76d2e80, offset=0, fi=0xb5fff124)
+    readdir returned 0x0xb5600704
+calling filler with name test1.c~
+calling filler with name file1.txt
+calling filler with name file4.txt
+calling filler with name bogus.txt~
+calling filler with name .
+calling filler with name file4.txt~
+calling filler with name file1.txt~
+calling filler with name ..
+calling filler with name file2.txt
+calling filler with name .Trash-1000
+    fi:
+    flags = 0x00000000
+    fh_old = 0xb56006e8
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb56006e8
+    lock_owner = 0x0000000000000000
+
+bb_releasedir(path="/", fi=0xb5fff134)
+    fi:
+    flags = 0x00000000
+    fh_old = 0xb56006e8
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb56006e8
+    lock_owner = 0x0000000000000000
+
+bb_opendir(path="/", fi=0xb5fff134)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/", fpath = "/home/user/Desktop/fuse/example/rootdir/"
+    opendir returned 0x0xb56006e8
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb56006e8
+    lock_owner = 0x0000000000000000
+
+bb_readdir(path="/", buf=0xb5600590, filler=0xb76d2e80, offset=0, fi=0xb5fff124)
+    readdir returned 0x0xb5600704
+calling filler with name test1.c~
+calling filler with name file1.txt
+calling filler with name file4.txt
+calling filler with name bogus.txt~
+calling filler with name .
+calling filler with name file4.txt~
+calling filler with name file1.txt~
+calling filler with name ..
+calling filler with name file2.txt
+calling filler with name .Trash-1000
+    fi:
+    flags = 0x00000000
+    fh_old = 0xb56006e8
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb56006e8
+    lock_owner = 0x0000000000000000
+
+bb_releasedir(path="/", fi=0xb5fff134)
+    fi:
+    flags = 0x00000000
+    fh_old = 0xb56006e8
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb56006e8
+    lock_owner = 0x0000000000000000
+
+bb_opendir(path="/", fi=0xb5fff134)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/", fpath = "/home/user/Desktop/fuse/example/rootdir/"
+    opendir returned 0x0xb56006e8
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb56006e8
+    lock_owner = 0x0000000000000000
+
+bb_readdir(path="/", buf=0xb5600590, filler=0xb76d2e80, offset=0, fi=0xb5fff124)
+    readdir returned 0x0xb5600704
+calling filler with name test1.c~
+calling filler with name file1.txt
+calling filler with name file4.txt
+calling filler with name bogus.txt~
+calling filler with name .
+calling filler with name file4.txt~
+calling filler with name file1.txt~
+calling filler with name ..
+calling filler with name file2.txt
+calling filler with name .Trash-1000
+    fi:
+    flags = 0x00000000
+    fh_old = 0xb56006e8
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb56006e8
+    lock_owner = 0x0000000000000000
+
+bb_releasedir(path="/", fi=0xb5fff134)
+    fi:
+    flags = 0x00000000
+    fh_old = 0xb56006e8
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb56006e8
+    lock_owner = 0x0000000000000000
+
+bb_opendir(path="/", fi=0xb5fff134)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/", fpath = "/home/user/Desktop/fuse/example/rootdir/"
+    opendir returned 0x0xb56006e8
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb56006e8
+    lock_owner = 0x0000000000000000
+
+bb_readdir(path="/", buf=0xb5600590, filler=0xb76d2e80, offset=0, fi=0xb5fff124)
+    readdir returned 0x0xb5600704
+calling filler with name test1.c~
+calling filler with name file1.txt
+calling filler with name file4.txt
+calling filler with name bogus.txt~
+calling filler with name .
+calling filler with name file4.txt~
+calling filler with name file1.txt~
+calling filler with name ..
+calling filler with name file2.txt
+calling filler with name .Trash-1000
+    fi:
+    flags = 0x00000000
+    fh_old = 0xb56006e8
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb56006e8
+    lock_owner = 0x0000000000000000
+
+bb_releasedir(path="/", fi=0xb5fff134)
+    fi:
+    flags = 0x00000000
+    fh_old = 0xb56006e8
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb56006e8
+    lock_owner = 0x0000000000000000
+
+bb_opendir(path="/", fi=0xb5fff134)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/", fpath = "/home/user/Desktop/fuse/example/rootdir/"
+    opendir returned 0x0xb56006e8
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb56006e8
+    lock_owner = 0x0000000000000000
+
+bb_readdir(path="/", buf=0xb5600590, filler=0xb76d2e80, offset=0, fi=0xb5fff124)
+    readdir returned 0x0xb5600704
+calling filler with name test1.c~
+calling filler with name file1.txt
+calling filler with name file4.txt
+calling filler with name bogus.txt~
+calling filler with name .
+calling filler with name file4.txt~
+calling filler with name file1.txt~
+calling filler with name ..
+calling filler with name file2.txt
+calling filler with name .Trash-1000
+    fi:
+    flags = 0x00000000
+    fh_old = 0xb56006e8
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb56006e8
+    lock_owner = 0x0000000000000000
+
+bb_releasedir(path="/", fi=0xb5fff134)
+    fi:
+    flags = 0x00000000
+    fh_old = 0xb56006e8
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb56006e8
+    lock_owner = 0x0000000000000000
+
+bb_opendir(path="/", fi=0xb5fff134)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/", fpath = "/home/user/Desktop/fuse/example/rootdir/"
+    opendir returned 0x0xb56006e8
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb56006e8
+    lock_owner = 0x0000000000000000
+
+bb_readdir(path="/", buf=0xb5600590, filler=0xb76d2e80, offset=0, fi=0xb5fff124)
+    readdir returned 0x0xb5600704
+calling filler with name test1.c~
+calling filler with name file1.txt
+calling filler with name file4.txt
+calling filler with name bogus.txt~
+calling filler with name .
+calling filler with name file4.txt~
+calling filler with name file1.txt~
+calling filler with name ..
+calling filler with name file2.txt
+calling filler with name .Trash-1000
+    fi:
+    flags = 0x00000000
+    fh_old = 0xb56006e8
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb56006e8
+    lock_owner = 0x0000000000000000
+
+bb_releasedir(path="/", fi=0xb5fff134)
+    fi:
+    flags = 0x00000000
+    fh_old = 0xb56006e8
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb56006e8
+    lock_owner = 0x0000000000000000
+
+bb_opendir(path="/", fi=0xb5fff134)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/", fpath = "/home/user/Desktop/fuse/example/rootdir/"
+    opendir returned 0x0xb56006e8
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb56006e8
+    lock_owner = 0x0000000000000000
+
+bb_readdir(path="/", buf=0xb5600590, filler=0xb76d2e80, offset=0, fi=0xb5fff124)
+    readdir returned 0x0xb5600704
+calling filler with name test1.c~
+calling filler with name file1.txt
+calling filler with name file4.txt
+calling filler with name bogus.txt~
+calling filler with name .
+calling filler with name file4.txt~
+calling filler with name file1.txt~
+calling filler with name ..
+calling filler with name file2.txt
+calling filler with name .Trash-1000
+    fi:
+    flags = 0x00000000
+    fh_old = 0xb56006e8
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb56006e8
+    lock_owner = 0x0000000000000000
+
+bb_releasedir(path="/", fi=0xb5fff134)
+    fi:
+    flags = 0x00000000
+    fh_old = 0xb56006e8
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb56006e8
+    lock_owner = 0x0000000000000000
+
+bb_opendir(path="/", fi=0xb5fff134)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/", fpath = "/home/user/Desktop/fuse/example/rootdir/"
+    opendir returned 0x0xb56006e8
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb56006e8
+    lock_owner = 0x0000000000000000
+
+bb_readdir(path="/", buf=0xb5600590, filler=0xb76d2e80, offset=0, fi=0xb7328124)
+    readdir returned 0x0xb5600704
+calling filler with name test1.c~
+calling filler with name file1.txt
+calling filler with name file4.txt
+calling filler with name bogus.txt~
+calling filler with name .
+calling filler with name file4.txt~
+calling filler with name file1.txt~
+calling filler with name ..
+calling filler with name file2.txt
+calling filler with name .Trash-1000
+    fi:
+    flags = 0x00000000
+    fh_old = 0xb56006e8
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb56006e8
+    lock_owner = 0x0000000000000000
+
+bb_releasedir(path="/", fi=0xb5fff134)
+    fi:
+    flags = 0x00000000
+    fh_old = 0xb56006e8
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb56006e8
+    lock_owner = 0x0000000000000000
+
+bb_opendir(path="/", fi=0xb5fff134)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/", fpath = "/home/user/Desktop/fuse/example/rootdir/"
+    opendir returned 0x0xb56006e8
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb56006e8
+    lock_owner = 0x0000000000000000
+
+bb_readdir(path="/", buf=0xb5600590, filler=0xb76d2e80, offset=0, fi=0xb5fff124)
+    readdir returned 0x0xb5600704
+calling filler with name test1.c~
+calling filler with name file1.txt
+calling filler with name file4.txt
+calling filler with name bogus.txt~
+calling filler with name .
+calling filler with name file4.txt~
+calling filler with name file1.txt~
+calling filler with name ..
+calling filler with name file2.txt
+calling filler with name .Trash-1000
+    fi:
+    flags = 0x00000000
+    fh_old = 0xb56006e8
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb56006e8
+    lock_owner = 0x0000000000000000
+
+bb_releasedir(path="/", fi=0xb5fff134)
+    fi:
+    flags = 0x00000000
+    fh_old = 0xb56006e8
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb56006e8
+    lock_owner = 0x0000000000000000
+
+bb_opendir(path="/", fi=0xb5fff134)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/", fpath = "/home/user/Desktop/fuse/example/rootdir/"
+    opendir returned 0x0xb56006e8
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb56006e8
+    lock_owner = 0x0000000000000000
+
+bb_readdir(path="/", buf=0xb5600590, filler=0xb76d2e80, offset=0, fi=0xb7328124)
+    readdir returned 0x0xb5600704
+calling filler with name test1.c~
+calling filler with name file1.txt
+calling filler with name file4.txt
+calling filler with name bogus.txt~
+calling filler with name .
+calling filler with name file4.txt~
+calling filler with name file1.txt~
+calling filler with name ..
+calling filler with name file2.txt
+calling filler with name .Trash-1000
+    fi:
+    flags = 0x00000000
+    fh_old = 0xb56006e8
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb56006e8
+    lock_owner = 0x0000000000000000
+
+bb_releasedir(path="/", fi=0xb5fff134)
+    fi:
+    flags = 0x00000000
+    fh_old = 0xb56006e8
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb56006e8
+    lock_owner = 0x0000000000000000
+
+bb_opendir(path="/", fi=0xb5fff134)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/", fpath = "/home/user/Desktop/fuse/example/rootdir/"
+    opendir returned 0x0xb56006e8
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb56006e8
+    lock_owner = 0x0000000000000000
+
+bb_readdir(path="/", buf=0xb5600590, filler=0xb76d2e80, offset=0, fi=0xb5fff124)
+    readdir returned 0x0xb5600704
+calling filler with name test1.c~
+calling filler with name file1.txt
+calling filler with name file4.txt
+calling filler with name bogus.txt~
+calling filler with name .
+calling filler with name file4.txt~
+calling filler with name file1.txt~
+calling filler with name ..
+calling filler with name file2.txt
+calling filler with name .Trash-1000
+    fi:
+    flags = 0x00000000
+    fh_old = 0xb56006e8
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb56006e8
+    lock_owner = 0x0000000000000000
+
+bb_releasedir(path="/", fi=0xb5fff134)
+    fi:
+    flags = 0x00000000
+    fh_old = 0xb56006e8
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb56006e8
+    lock_owner = 0x0000000000000000
+
+bb_opendir(path="/", fi=0xb5fff134)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/", fpath = "/home/user/Desktop/fuse/example/rootdir/"
+    opendir returned 0x0xb56006e8
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb56006e8
+    lock_owner = 0x0000000000000000
+
+bb_readdir(path="/", buf=0xb5600590, filler=0xb76d2e80, offset=0, fi=0xb5fff124)
+    readdir returned 0x0xb5600704
+calling filler with name test1.c~
+calling filler with name file1.txt
+calling filler with name file4.txt
+calling filler with name bogus.txt~
+calling filler with name .
+calling filler with name file4.txt~
+calling filler with name file1.txt~
+calling filler with name ..
+calling filler with name file2.txt
+calling filler with name .Trash-1000
+    fi:
+    flags = 0x00000000
+    fh_old = 0xb56006e8
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb56006e8
+    lock_owner = 0x0000000000000000
+
+bb_releasedir(path="/", fi=0xb5fff134)
+    fi:
+    flags = 0x00000000
+    fh_old = 0xb56006e8
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb56006e8
+    lock_owner = 0x0000000000000000
+
+bb_opendir(path="/", fi=0xb5fff134)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/", fpath = "/home/user/Desktop/fuse/example/rootdir/"
+    opendir returned 0x0xb56006e8
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb56006e8
+    lock_owner = 0x0000000000000000
+
+bb_readdir(path="/", buf=0xb5600590, filler=0xb76d2e80, offset=0, fi=0xb5fff124)
+    readdir returned 0x0xb5600704
+calling filler with name test1.c~
+calling filler with name file1.txt
+calling filler with name file4.txt
+calling filler with name bogus.txt~
+calling filler with name .
+calling filler with name file4.txt~
+calling filler with name file1.txt~
+calling filler with name ..
+calling filler with name file2.txt
+calling filler with name .Trash-1000
+    fi:
+    flags = 0x00000000
+    fh_old = 0xb56006e8
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb56006e8
+    lock_owner = 0x0000000000000000
+
+bb_releasedir(path="/", fi=0xb5fff134)
+    fi:
+    flags = 0x00000000
+    fh_old = 0xb56006e8
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb56006e8
+    lock_owner = 0x0000000000000000
+
+bb_opendir(path="/", fi=0xb5fff134)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/", fpath = "/home/user/Desktop/fuse/example/rootdir/"
+    opendir returned 0x0xb56006e8
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb56006e8
+    lock_owner = 0x0000000000000000
+
+bb_readdir(path="/", buf=0xb5600590, filler=0xb76d2e80, offset=0, fi=0xb5fff124)
+    readdir returned 0x0xb5600704
+calling filler with name test1.c~
+calling filler with name file1.txt
+calling filler with name file4.txt
+calling filler with name bogus.txt~
+calling filler with name .
+calling filler with name file4.txt~
+calling filler with name file1.txt~
+calling filler with name ..
+calling filler with name file2.txt
+calling filler with name .Trash-1000
+    fi:
+    flags = 0x00000000
+    fh_old = 0xb56006e8
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb56006e8
+    lock_owner = 0x0000000000000000
+
+bb_releasedir(path="/", fi=0xb5fff134)
+    fi:
+    flags = 0x00000000
+    fh_old = 0xb56006e8
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb56006e8
+    lock_owner = 0x0000000000000000
+
+bb_opendir(path="/", fi=0xb7328134)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/", fpath = "/home/user/Desktop/fuse/example/rootdir/"
+    opendir returned 0x0xb6a006e8
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb6a006e8
+    lock_owner = 0x0000000000000000
+
+bb_readdir(path="/", buf=0xb6a00590, filler=0xb76d2e80, offset=0, fi=0xb55ff124)
+    readdir returned 0x0xb6a00704
+calling filler with name test1.c~
+calling filler with name file1.txt
+calling filler with name file4.txt
+calling filler with name bogus.txt~
+calling filler with name .
+calling filler with name file4.txt~
+calling filler with name file1.txt~
+calling filler with name ..
+calling filler with name file2.txt
+calling filler with name .Trash-1000
+    fi:
+    flags = 0x00000000
+    fh_old = 0xb6a006e8
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb6a006e8
+    lock_owner = 0x0000000000000000
+
+bb_releasedir(path="/", fi=0xb5fff134)
+    fi:
+    flags = 0x00000000
+    fh_old = 0xb6a006e8
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb6a006e8
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/autorun.inf", statbuf=0xb5fff104)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/autorun.inf", fpath = "/home/user/Desktop/fuse/example/rootdir/autorun.inf"
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+    lstat returned -1
+    ERROR lstat: No such file or directory
+
+bb_getattr(path="/", statbuf=0xb69ff0f4)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/", fpath = "/home/user/Desktop/fuse/example/rootdir/"
+    si:
+    st_dev = 2049
+    st_ino = 289793
+    st_mode = 040775
+    st_nlink = 3
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x5cf11940
+    st_mtime = 0x5cf1193f
+    st_ctime = 0x5cf1193f
+    lstat returned 0
+
+bb_access(path="/", mask=04)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/", fpath = "/home/user/Desktop/fuse/example/rootdir/"
+
+bb_access(path="/", mask=02)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/", fpath = "/home/user/Desktop/fuse/example/rootdir/"
+
+bb_access(path="/", mask=01)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/", fpath = "/home/user/Desktop/fuse/example/rootdir/"
+
+bb_opendir(path="/", fi=0xb69ff134)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/", fpath = "/home/user/Desktop/fuse/example/rootdir/"
+    opendir returned 0x0xb6000d00
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb6000d00
+    lock_owner = 0x0000000000000000
+
+bb_access(path="/", mask=02)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/", fpath = "/home/user/Desktop/fuse/example/rootdir/"
+
+bb_getattr(path="/.Trash", statbuf=0xb55ff104)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/.Trash", fpath = "/home/user/Desktop/fuse/example/rootdir/.Trash"
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+    lstat returned -1
+    ERROR lstat: No such file or directory
+
+bb_getattr(path="/.Trash-1000", statbuf=0xb5fff104)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/.Trash-1000", fpath = "/home/user/Desktop/fuse/example/rootdir/.Trash-1000"
+    si:
+    st_dev = 2049
+    st_ino = 289912
+    st_mode = 040700
+    st_nlink = 4
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x5ce56042
+    st_mtime = 0x5ce56042
+    st_ctime = 0x5ce56042
+    lstat returned 0
+
+bb_readdir(path="/", buf=0xb60005c8, filler=0xb76d2e80, offset=0, fi=0xb69ff124)
+    readdir returned 0x0xb6000d1c
+calling filler with name test1.c~
+calling filler with name file1.txt
+calling filler with name file4.txt
+calling filler with name bogus.txt~
+calling filler with name .
+calling filler with name file4.txt~
+calling filler with name file1.txt~
+calling filler with name ..
+calling filler with name file2.txt
+calling filler with name .Trash-1000
+    fi:
+    flags = 0x00000000
+    fh_old = 0xb6000d00
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb6000d00
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/test1.c~", statbuf=0xb55ff104)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/test1.c~", fpath = "/home/user/Desktop/fuse/example/rootdir/test1.c~"
+    si:
+    st_dev = 2049
+    st_ino = 289937
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 529
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x5ce5670f
+    st_mtime = 0x5ce5670f
+    st_ctime = 0x5ce56731
+    lstat returned 0
+
+bb_getattr(path="/.hidden", statbuf=0xb5fff104)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/.hidden", fpath = "/home/user/Desktop/fuse/example/rootdir/.hidden"
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+    lstat returned -1
+    ERROR lstat: No such file or directory
+
+bb_access(path="/test1.c~", mask=04)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/test1.c~", fpath = "/home/user/Desktop/fuse/example/rootdir/test1.c~"
+
+bb_access(path="/test1.c~", mask=02)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/test1.c~", fpath = "/home/user/Desktop/fuse/example/rootdir/test1.c~"
+
+bb_access(path="/test1.c~", mask=01)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/test1.c~", fpath = "/home/user/Desktop/fuse/example/rootdir/test1.c~"
+    ERROR bb_access access: Permission denied
+
+bb_getattr(path="/", statbuf=0xb5fff0f4)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/", fpath = "/home/user/Desktop/fuse/example/rootdir/"
+    si:
+    st_dev = 2049
+    st_ino = 289793
+    st_mode = 040775
+    st_nlink = 3
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x5cf11940
+    st_mtime = 0x5cf1193f
+    st_ctime = 0x5cf1193f
+    lstat returned 0
+
+bb_getattr(path="/file1.txt", statbuf=0xb69ff104)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/file1.txt", fpath = "/home/user/Desktop/fuse/example/rootdir/file1.txt"
+    si:
+    st_dev = 2049
+    st_ino = 290152
+    st_mode = 0100644
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 8192
+    st_blksize = 4096
+    st_blocks = 16
+    st_atime = 0x5cf10c8e
+    st_mtime = 0x5cf10d87
+    st_ctime = 0x5cf10d87
+    lstat returned 0
+
+bb_access(path="/file1.txt", mask=04)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/file1.txt", fpath = "/home/user/Desktop/fuse/example/rootdir/file1.txt"
+
+bb_access(path="/file1.txt", mask=02)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/file1.txt", fpath = "/home/user/Desktop/fuse/example/rootdir/file1.txt"
+
+bb_access(path="/file1.txt", mask=01)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/file1.txt", fpath = "/home/user/Desktop/fuse/example/rootdir/file1.txt"
+    ERROR bb_access access: Permission denied
+
+bb_getattr(path="/file4.txt", statbuf=0xb69ff104)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/file4.txt", fpath = "/home/user/Desktop/fuse/example/rootdir/file4.txt"
+    si:
+    st_dev = 2049
+    st_ino = 290156
+    st_mode = 0100600
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 8192
+    st_blksize = 4096
+    st_blocks = 16
+    st_atime = 0x5cf1180c
+    st_mtime = 0x5cf01d85
+    st_ctime = 0x5cf1180c
+    lstat returned 0
+
+bb_access(path="/file4.txt", mask=04)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/file4.txt", fpath = "/home/user/Desktop/fuse/example/rootdir/file4.txt"
+
+bb_access(path="/file4.txt", mask=02)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/file4.txt", fpath = "/home/user/Desktop/fuse/example/rootdir/file4.txt"
+
+bb_access(path="/file4.txt", mask=01)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/file4.txt", fpath = "/home/user/Desktop/fuse/example/rootdir/file4.txt"
+    ERROR bb_access access: Permission denied
+
+bb_getattr(path="/bogus.txt~", statbuf=0xb69ff104)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/bogus.txt~", fpath = "/home/user/Desktop/fuse/example/rootdir/bogus.txt~"
+    si:
+    st_dev = 2049
+    st_ino = 289813
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 11
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x5ce455e6
+    st_mtime = 0x5ce455cd
+    st_ctime = 0x5ce45785
+    lstat returned 0
+
+bb_access(path="/bogus.txt~", mask=04)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/bogus.txt~", fpath = "/home/user/Desktop/fuse/example/rootdir/bogus.txt~"
+
+bb_access(path="/bogus.txt~", mask=02)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/bogus.txt~", fpath = "/home/user/Desktop/fuse/example/rootdir/bogus.txt~"
+
+bb_access(path="/bogus.txt~", mask=01)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/bogus.txt~", fpath = "/home/user/Desktop/fuse/example/rootdir/bogus.txt~"
+    ERROR bb_access access: Permission denied
+
+bb_getattr(path="/file4.txt~", statbuf=0xb5fff104)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/file4.txt~", fpath = "/home/user/Desktop/fuse/example/rootdir/file4.txt~"
+    si:
+    st_dev = 2049
+    st_ino = 290160
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 4096
+    st_blocks = 0
+    st_atime = 0x5cf10ca9
+    st_mtime = 0x5cf10c9c
+    st_ctime = 0x5cf10cb5
+    lstat returned 0
+
+bb_access(path="/file4.txt~", mask=04)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/file4.txt~", fpath = "/home/user/Desktop/fuse/example/rootdir/file4.txt~"
+
+bb_access(path="/file4.txt~", mask=02)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/file4.txt~", fpath = "/home/user/Desktop/fuse/example/rootdir/file4.txt~"
+
+bb_access(path="/file4.txt~", mask=01)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/file4.txt~", fpath = "/home/user/Desktop/fuse/example/rootdir/file4.txt~"
+    ERROR bb_access access: Permission denied
+
+bb_getattr(path="/file1.txt~", statbuf=0xb5fff104)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/file1.txt~", fpath = "/home/user/Desktop/fuse/example/rootdir/file1.txt~"
+    si:
+    st_dev = 2049
+    st_ino = 289828
+    st_mode = 0100644
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4097
+    st_blksize = 4096
+    st_blocks = 16
+    st_atime = 0x5ce4573c
+    st_mtime = 0x5ce4573b
+    st_ctime = 0x5ce45751
+    lstat returned 0
+
+bb_access(path="/file1.txt~", mask=04)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/file1.txt~", fpath = "/home/user/Desktop/fuse/example/rootdir/file1.txt~"
+
+bb_access(path="/file1.txt~", mask=02)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/file1.txt~", fpath = "/home/user/Desktop/fuse/example/rootdir/file1.txt~"
+
+bb_access(path="/file1.txt~", mask=01)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/file1.txt~", fpath = "/home/user/Desktop/fuse/example/rootdir/file1.txt~"
+    ERROR bb_access access: Permission denied
+
+bb_getattr(path="/file2.txt", statbuf=0xb5fff104)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/file2.txt", fpath = "/home/user/Desktop/fuse/example/rootdir/file2.txt"
+    si:
+    st_dev = 2049
+    st_ino = 290153
+    st_mode = 0100644
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 8192
+    st_blksize = 4096
+    st_blocks = 16
+    st_atime = 0x5cf10c8e
+    st_mtime = 0x5cf10d87
+    st_ctime = 0x5cf10d87
+    lstat returned 0
+
+bb_access(path="/file2.txt", mask=04)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/file2.txt", fpath = "/home/user/Desktop/fuse/example/rootdir/file2.txt"
+
+bb_access(path="/file2.txt", mask=02)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/file2.txt", fpath = "/home/user/Desktop/fuse/example/rootdir/file2.txt"
+
+bb_access(path="/file2.txt", mask=01)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/file2.txt", fpath = "/home/user/Desktop/fuse/example/rootdir/file2.txt"
+    ERROR bb_access access: Permission denied
+
+bb_access(path="/.Trash-1000", mask=04)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/.Trash-1000", fpath = "/home/user/Desktop/fuse/example/rootdir/.Trash-1000"
+
+bb_access(path="/.Trash-1000", mask=02)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/.Trash-1000", fpath = "/home/user/Desktop/fuse/example/rootdir/.Trash-1000"
+
+bb_access(path="/.Trash-1000", mask=01)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/.Trash-1000", fpath = "/home/user/Desktop/fuse/example/rootdir/.Trash-1000"
+
+bb_releasedir(path="/", fi=0xb5fff134)
+    fi:
+    flags = 0x00000000
+    fh_old = 0xb6000d00
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb6000d00
+    lock_owner = 0x0000000000000000
+
+bb_open(path"/file1.txt", fi=0xb69ff1c0)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/file1.txt", fpath = "/home/user/Desktop/fuse/example/rootdir/file1.txt"
+    open returned 5
+    fi:
+    flags = 0x00008000
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/file1.txt", fpath = "/home/user/Desktop/fuse/example/rootdir/file1.txt"
+
+bb_read(path="/file1.txt", buf=0xb6a006c0, size=8192, offset=0, fi=0xb73281b0)
+    fi:
+    flags = 0x00008000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+    pread returned 4096
+    open returned 6
+    write returned 40
+    write returned 4096
+    pread returned 4096
+path before block is /home/user/Desktop/fuse/example/rootdir/
+    open returned 7
+    read returned 40
+    open returned 7
+    write returned 40
+    write returned 4096
+
+bb_getattr(path="/file1.txt", statbuf=0xb55ff0f4)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/file1.txt", fpath = "/home/user/Desktop/fuse/example/rootdir/file1.txt"
+    si:
+    st_dev = 2049
+    st_ino = 290152
+    st_mode = 0100644
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 8192
+    st_blksize = 4096
+    st_blocks = 16
+    st_atime = 0x5cf11963
+    st_mtime = 0x5cf10d87
+    st_ctime = 0x5cf10d87
+    lstat returned 0
+
+bb_flush(path="/file1.txt", fi=0xb5fff1c0)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0xd8c840e0c165322e
+
+bb_release(path="/file1.txt", fi=0xb69ff1b0)
+    fi:
+    flags = 0x00008000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/file1.txt", fpath = "/home/user/Desktop/fuse/example/rootdir/file1.txt"
+    open returned 8
+    open returned 9
+    read returned 40
+    read returned 4096
+    write returned 4096
+    open returned 9
+    read returned 40
+    read returned 4096
+    write returned 4096
+    close returned 0
+    close returned 0
+
+bb_open(path"/file2.txt", fi=0xb73281c0)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/file2.txt", fpath = "/home/user/Desktop/fuse/example/rootdir/file2.txt"
+    open returned 5
+    fi:
+    flags = 0x00008000
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/file2.txt", fpath = "/home/user/Desktop/fuse/example/rootdir/file2.txt"
+
+bb_read(path="/file2.txt", buf=0xb4c00610, size=8192, offset=0, fi=0xb55ff1b0)
+    fi:
+    flags = 0x00008000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+    pread returned 4096
+path before block is /home/user/Desktop/fuse/example/rootdir/
+    open returned 8
+    read returned 40
+path before block is /home/user/Desktop/fuse/example/rootdir/
+    open returned 8
+    read returned 40
+    pread returned 4096
+path before block is /home/user/Desktop/fuse/example/rootdir/
+    open returned 9
+    read returned 40
+
+bb_getattr(path="/file2.txt", statbuf=0xb5fff0f4)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/file2.txt", fpath = "/home/user/Desktop/fuse/example/rootdir/file2.txt"
+    si:
+    st_dev = 2049
+    st_ino = 290153
+    st_mode = 0100644
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 8192
+    st_blksize = 4096
+    st_blocks = 16
+    st_atime = 0x5cf11963
+    st_mtime = 0x5cf10d87
+    st_ctime = 0x5cf10d87
+    lstat returned 0
+
+bb_flush(path="/file2.txt", fi=0xb69ff1c0)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0xd8c840e0c165322e
+
+bb_release(path="/file2.txt", fi=0xb73281b0)
+    fi:
+    flags = 0x00008000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/file2.txt", fpath = "/home/user/Desktop/fuse/example/rootdir/file2.txt"
+    open returned 10
+    open returned 11
+    read returned 40
+    read returned 4096
+    write returned 4096
+    open returned 11
+    read returned 40
+    read returned 4096
+    write returned 4096
+    close returned 0
+    close returned 0
+
+bb_open(path"/file4.txt", fi=0xb55ff1c0)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/file4.txt", fpath = "/home/user/Desktop/fuse/example/rootdir/file4.txt"
+    open returned 5
+    fi:
+    flags = 0x00008000
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/file4.txt", fpath = "/home/user/Desktop/fuse/example/rootdir/file4.txt"
+
+bb_read(path="/file4.txt", buf=0xb56006c0, size=8192, offset=0, fi=0xb5fff1b0)
+    fi:
+    flags = 0x00008000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+    pread returned 4096
+path before block is /home/user/Desktop/fuse/example/rootdir/
+    open returned 10
+    read returned 40
+path before block is /home/user/Desktop/fuse/example/rootdir/
+    open returned 10
+    read returned 40
+    open returned 10
+    write returned 40
+    write returned 4096
+    pread returned 4096
+path before block is /home/user/Desktop/fuse/example/rootdir/
+    open returned 11
+    read returned 40
+path before block is /home/user/Desktop/fuse/example/rootdir/
+    open returned 11
+    read returned 40
+path before block is /home/user/Desktop/fuse/example/rootdir/
+    open returned 11
+    read returned 40
+    open returned 11
+    write returned 40
+    write returned 4096
+
+bb_getattr(path="/file4.txt", statbuf=0xb69ff0f4)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/file4.txt", fpath = "/home/user/Desktop/fuse/example/rootdir/file4.txt"
+    si:
+    st_dev = 2049
+    st_ino = 290156
+    st_mode = 0100600
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 8192
+    st_blksize = 4096
+    st_blocks = 16
+    st_atime = 0x5cf1180c
+    st_mtime = 0x5cf01d85
+    st_ctime = 0x5cf1180c
+    lstat returned 0
+
+bb_flush(path="/file4.txt", fi=0xb73281c0)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0xd8c840e0c165322e
+
+bb_release(path="/file4.txt", fi=0xb55ff1b0)
+    fi:
+    flags = 0x00008000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/file4.txt", fpath = "/home/user/Desktop/fuse/example/rootdir/file4.txt"
+    open returned 12
+    open returned 13
+    read returned 40
+    read returned 4096
+    write returned 4096
+    open returned 13
+    read returned 40
+    read returned 4096
+    write returned 4096
+    close returned 0
+    close returned 0
+
+bb_getattr(path="/", statbuf=0xb5fff0f4)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/", fpath = "/home/user/Desktop/fuse/example/rootdir/"
+    si:
+    st_dev = 2049
+    st_ino = 289793
+    st_mode = 040775
+    st_nlink = 3
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x5cf11940
+    st_mtime = 0x5cf11963
+    st_ctime = 0x5cf11963
+    lstat returned 0
+
+bb_access(path="/", mask=04)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/", fpath = "/home/user/Desktop/fuse/example/rootdir/"
+
+bb_access(path="/", mask=02)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/", fpath = "/home/user/Desktop/fuse/example/rootdir/"
+
+bb_access(path="/", mask=01)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/", fpath = "/home/user/Desktop/fuse/example/rootdir/"
+
+bb_getattr(path="/", statbuf=0xb5fff0f4)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/", fpath = "/home/user/Desktop/fuse/example/rootdir/"
+    si:
+    st_dev = 2049
+    st_ino = 289793
+    st_mode = 040775
+    st_nlink = 3
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x5cf11965
+    st_mtime = 0x5cf11963
+    st_ctime = 0x5cf11963
+    lstat returned 0
+
+bb_getattr(path="/file1.txt", statbuf=0xb69ff104)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/file1.txt", fpath = "/home/user/Desktop/fuse/example/rootdir/file1.txt"
+    si:
+    st_dev = 2049
+    st_ino = 290152
+    st_mode = 0100644
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 8192
+    st_blksize = 4096
+    st_blocks = 16
+    st_atime = 0x5cf11963
+    st_mtime = 0x5cf11963
+    st_ctime = 0x5cf11963
+    lstat returned 0
+
+bb_open(path"/file1.txt", fi=0xb73281c0)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/file1.txt", fpath = "/home/user/Desktop/fuse/example/rootdir/file1.txt"
+    open returned 5
+    fi:
+    flags = 0x00000002
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/file2.txt", statbuf=0xb55ff104)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/file2.txt", fpath = "/home/user/Desktop/fuse/example/rootdir/file2.txt"
+    si:
+    st_dev = 2049
+    st_ino = 290153
+    st_mode = 0100644
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 8192
+    st_blksize = 4096
+    st_blocks = 16
+    st_atime = 0x5cf11963
+    st_mtime = 0x5cf11963
+    st_ctime = 0x5cf11963
+    lstat returned 0
+
+bb_open(path"/file2.txt", fi=0xb5fff1c0)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/file2.txt", fpath = "/home/user/Desktop/fuse/example/rootdir/file2.txt"
+    open returned 12
+    fi:
+    flags = 0x00000002
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x000000000000000c
+    lock_owner = 0x0000000000000000
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/file2.txt", fpath = "/home/user/Desktop/fuse/example/rootdir/file2.txt"
+
+bb_read(path="/file2.txt", buf=0xb6000db0, size=8192, offset=0, fi=0xb69ff1b0)
+    fi:
+    flags = 0x00000002
+    fh_old = 0x0000000c
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x000000000000000c
+    lock_owner = 0x0000000000000000
+    open returned 13
+    read returned 40
+    read returned 4096
+    open returned 14
+    read returned 40
+    read returned 4096
+
+bb_getxattr(path = "/file1.txt", name = "security.capability", value = 0x00000000, size = 0)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/file1.txt", fpath = "/home/user/Desktop/fuse/example/rootdir/file1.txt"
+    lgetxattr returned -1
+    ERROR lgetxattr: No data available
+
+bb_write(path="/file1.txt", buf=0xb61bb058, size=4096, offset=0, fi=0xb55ff244)
+    fi:
+    flags = 0x00000002
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/file1.txt", fpath = "/home/user/Desktop/fuse/example/rootdir/file1.txt"
+path before block is /home/user/Desktop/fuse/example/rootdir/
+    open returned 15
+    read returned 40
+path before block is /home/user/Desktop/fuse/example/rootdir/
+    open returned 15
+    read returned 40
+
+bb_write(path="/file1.txt", buf=0xb61dd058, size=4096, offset=4096, fi=0xb5fff244)
+    fi:
+    flags = 0x00000002
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/file1.txt", fpath = "/home/user/Desktop/fuse/example/rootdir/file1.txt"
+path before block is /home/user/Desktop/fuse/example/rootdir/
+    open returned 16
+    read returned 40
+
+bb_getxattr(path = "/file1.txt", name = "security.capability", value = 0x00000000, size = 0)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/file1.txt", fpath = "/home/user/Desktop/fuse/example/rootdir/file1.txt"
+    lgetxattr returned -1
+    ERROR lgetxattr: No data available
+
+bb_write(path="/file1.txt", buf=0xb7329058, size=4096, offset=8192, fi=0xb7328244)
+    fi:
+    flags = 0x00000002
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/file1.txt", fpath = "/home/user/Desktop/fuse/example/rootdir/file1.txt"
+path before block is /home/user/Desktop/fuse/example/rootdir/
+    open returned 17
+    read returned 40
+path before block is /home/user/Desktop/fuse/example/rootdir/
+    open returned 17
+    read returned 40
+
+bb_write(path="/file1.txt", buf=0xb61bb058, size=4096, offset=12288, fi=0xb55ff244)
+    fi:
+    flags = 0x00000002
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/file1.txt", fpath = "/home/user/Desktop/fuse/example/rootdir/file1.txt"
+path before block is /home/user/Desktop/fuse/example/rootdir/
+    open returned 18
+    read returned 40
+
+bb_flush(path="/file1.txt", fi=0xb5fff1c0)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0xbff1a254f2848af3
+
+bb_release(path="/file1.txt", fi=0xb69ff1b0)
+    fi:
+    flags = 0x00000002
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/file1.txt", fpath = "/home/user/Desktop/fuse/example/rootdir/file1.txt"
+    open returned 19
+    open returned 20
+    read returned 40
+    read returned 4096
+    write returned 4096
+    open returned 20
+    read returned 40
+    read returned 4096
+    write returned 4096
+    open returned 20
+    read returned 40
+    read returned 4096
+    write returned 4096
+    open returned 20
+    read returned 40
+    read returned 4096
+    write returned 4096
+    close returned 0
+    close returned 0
+
+bb_flush(path="/file2.txt", fi=0xb73281c0)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x0000000c
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x000000000000000c
+    lock_owner = 0xbff1a254f2848af3
+
+bb_release(path="/file2.txt", fi=0xb55ff1b0)
+    fi:
+    flags = 0x00000002
+    fh_old = 0x0000000c
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x000000000000000c
+    lock_owner = 0x0000000000000000
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/file2.txt", fpath = "/home/user/Desktop/fuse/example/rootdir/file2.txt"
+    open returned 5
+    open returned 19
+    read returned 40
+    read returned 4096
+    write returned 4096
+    open returned 19
+    read returned 40
+    read returned 4096
+    write returned 4096
+    close returned 0
+    close returned 0
+
+bb_getattr(path="/", statbuf=0xb5fff0f4)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/", fpath = "/home/user/Desktop/fuse/example/rootdir/"
+    si:
+    st_dev = 2049
+    st_ino = 289793
+    st_mode = 040775
+    st_nlink = 3
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x5cf11965
+    st_mtime = 0x5cf11963
+    st_ctime = 0x5cf11963
+    lstat returned 0
+
+bb_access(path="/", mask=04)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/", fpath = "/home/user/Desktop/fuse/example/rootdir/"
+
+bb_access(path="/", mask=02)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/", fpath = "/home/user/Desktop/fuse/example/rootdir/"
+
+bb_access(path="/", mask=01)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/", fpath = "/home/user/Desktop/fuse/example/rootdir/"
+
+bb_getattr(path="/", statbuf=0xb5fff0f4)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/", fpath = "/home/user/Desktop/fuse/example/rootdir/"
+    si:
+    st_dev = 2049
+    st_ino = 289793
+    st_mode = 040775
+    st_nlink = 3
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x5cf11965
+    st_mtime = 0x5cf11963
+    st_ctime = 0x5cf11963
+    lstat returned 0
+
+bb_access(path="/", mask=04)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/", fpath = "/home/user/Desktop/fuse/example/rootdir/"
+
+bb_access(path="/", mask=02)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/", fpath = "/home/user/Desktop/fuse/example/rootdir/"
+
+bb_access(path="/", mask=01)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/", fpath = "/home/user/Desktop/fuse/example/rootdir/"
+
+bb_getattr(path="/", statbuf=0xb5fff0f4)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/", fpath = "/home/user/Desktop/fuse/example/rootdir/"
+    si:
+    st_dev = 2049
+    st_ino = 289793
+    st_mode = 040775
+    st_nlink = 3
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x5cf11965
+    st_mtime = 0x5cf11963
+    st_ctime = 0x5cf11963
+    lstat returned 0
+
+bb_opendir(path="/", fi=0xb69ff134)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/", fpath = "/home/user/Desktop/fuse/example/rootdir/"
+    opendir returned 0x0xb6000eb8
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb6000eb8
+    lock_owner = 0x0000000000000000
+
+bb_access(path="/", mask=02)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/", fpath = "/home/user/Desktop/fuse/example/rootdir/"
+
+bb_getattr(path="/.Trash", statbuf=0xb55ff104)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/.Trash", fpath = "/home/user/Desktop/fuse/example/rootdir/.Trash"
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+    lstat returned -1
+    ERROR lstat: No such file or directory
+
+bb_getattr(path="/.Trash-1000", statbuf=0xb5fff104)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/.Trash-1000", fpath = "/home/user/Desktop/fuse/example/rootdir/.Trash-1000"
+    si:
+    st_dev = 2049
+    st_ino = 289912
+    st_mode = 040700
+    st_nlink = 4
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x5ce56042
+    st_mtime = 0x5ce56042
+    st_ctime = 0x5ce56042
+    lstat returned 0
+
+bb_readdir(path="/", buf=0xb60005c8, filler=0xb76d2e80, offset=0, fi=0xb69ff124)
+    readdir returned 0x0xb6000ed4
+calling filler with name test1.c~
+calling filler with name file1.txt
+calling filler with name file4.txt
+calling filler with name bogus.txt~
+calling filler with name .
+calling filler with name file4.txt~
+calling filler with name file1.txt~
+calling filler with name ..
+calling filler with name file2.txt
+calling filler with name .Trash-1000
+    fi:
+    flags = 0x00000000
+    fh_old = 0xb6000eb8
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb6000eb8
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/test1.c~", statbuf=0xb55ff104)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/test1.c~", fpath = "/home/user/Desktop/fuse/example/rootdir/test1.c~"
+    si:
+    st_dev = 2049
+    st_ino = 289937
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 529
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x5ce5670f
+    st_mtime = 0x5ce5670f
+    st_ctime = 0x5ce56731
+    lstat returned 0
+
+bb_getattr(path="/.hidden", statbuf=0xb5fff104)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/.hidden", fpath = "/home/user/Desktop/fuse/example/rootdir/.hidden"
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+    lstat returned -1
+    ERROR lstat: No such file or directory
+
+bb_access(path="/test1.c~", mask=04)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/test1.c~", fpath = "/home/user/Desktop/fuse/example/rootdir/test1.c~"
+
+bb_access(path="/test1.c~", mask=02)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/test1.c~", fpath = "/home/user/Desktop/fuse/example/rootdir/test1.c~"
+
+bb_access(path="/test1.c~", mask=01)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/test1.c~", fpath = "/home/user/Desktop/fuse/example/rootdir/test1.c~"
+    ERROR bb_access access: Permission denied
+
+bb_getattr(path="/", statbuf=0xb5fff0f4)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/", fpath = "/home/user/Desktop/fuse/example/rootdir/"
+    si:
+    st_dev = 2049
+    st_ino = 289793
+    st_mode = 040775
+    st_nlink = 3
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x5cf11965
+    st_mtime = 0x5cf11963
+    st_ctime = 0x5cf11963
+    lstat returned 0
+
+bb_getattr(path="/file1.txt", statbuf=0xb69ff104)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/file1.txt", fpath = "/home/user/Desktop/fuse/example/rootdir/file1.txt"
+    si:
+    st_dev = 2049
+    st_ino = 290152
+    st_mode = 0100644
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 16384
+    st_blksize = 4096
+    st_blocks = 32
+    st_atime = 0x5cf11963
+    st_mtime = 0x5cf1197b
+    st_ctime = 0x5cf1197b
+    lstat returned 0
+
+bb_access(path="/file1.txt", mask=04)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/file1.txt", fpath = "/home/user/Desktop/fuse/example/rootdir/file1.txt"
+
+bb_access(path="/file1.txt", mask=02)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/file1.txt", fpath = "/home/user/Desktop/fuse/example/rootdir/file1.txt"
+
+bb_access(path="/file1.txt", mask=01)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/file1.txt", fpath = "/home/user/Desktop/fuse/example/rootdir/file1.txt"
+    ERROR bb_access access: Permission denied
+
+bb_getattr(path="/file4.txt", statbuf=0xb69ff104)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/file4.txt", fpath = "/home/user/Desktop/fuse/example/rootdir/file4.txt"
+    si:
+    st_dev = 2049
+    st_ino = 290156
+    st_mode = 0100600
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 8192
+    st_blksize = 4096
+    st_blocks = 16
+    st_atime = 0x5cf11965
+    st_mtime = 0x5cf11963
+    st_ctime = 0x5cf11963
+    lstat returned 0
+
+bb_access(path="/file4.txt", mask=04)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/file4.txt", fpath = "/home/user/Desktop/fuse/example/rootdir/file4.txt"
+
+bb_access(path="/file4.txt", mask=02)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/file4.txt", fpath = "/home/user/Desktop/fuse/example/rootdir/file4.txt"
+
+bb_access(path="/file4.txt", mask=01)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/file4.txt", fpath = "/home/user/Desktop/fuse/example/rootdir/file4.txt"
+    ERROR bb_access access: Permission denied
+
+bb_getattr(path="/bogus.txt~", statbuf=0xb69ff104)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/bogus.txt~", fpath = "/home/user/Desktop/fuse/example/rootdir/bogus.txt~"
+    si:
+    st_dev = 2049
+    st_ino = 289813
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 11
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x5ce455e6
+    st_mtime = 0x5ce455cd
+    st_ctime = 0x5ce45785
+    lstat returned 0
+
+bb_access(path="/bogus.txt~", mask=04)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/bogus.txt~", fpath = "/home/user/Desktop/fuse/example/rootdir/bogus.txt~"
+
+bb_access(path="/bogus.txt~", mask=02)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/bogus.txt~", fpath = "/home/user/Desktop/fuse/example/rootdir/bogus.txt~"
+
+bb_access(path="/bogus.txt~", mask=01)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/bogus.txt~", fpath = "/home/user/Desktop/fuse/example/rootdir/bogus.txt~"
+    ERROR bb_access access: Permission denied
+
+bb_getattr(path="/file4.txt~", statbuf=0xb69ff104)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/file4.txt~", fpath = "/home/user/Desktop/fuse/example/rootdir/file4.txt~"
+    si:
+    st_dev = 2049
+    st_ino = 290160
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 4096
+    st_blocks = 0
+    st_atime = 0x5cf10ca9
+    st_mtime = 0x5cf10c9c
+    st_ctime = 0x5cf10cb5
+    lstat returned 0
+
+bb_access(path="/file4.txt~", mask=04)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/file4.txt~", fpath = "/home/user/Desktop/fuse/example/rootdir/file4.txt~"
+
+bb_access(path="/file4.txt~", mask=02)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/file4.txt~", fpath = "/home/user/Desktop/fuse/example/rootdir/file4.txt~"
+
+bb_access(path="/file4.txt~", mask=01)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/file4.txt~", fpath = "/home/user/Desktop/fuse/example/rootdir/file4.txt~"
+    ERROR bb_access access: Permission denied
+
+bb_getattr(path="/file1.txt~", statbuf=0xb69ff104)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/file1.txt~", fpath = "/home/user/Desktop/fuse/example/rootdir/file1.txt~"
+    si:
+    st_dev = 2049
+    st_ino = 289828
+    st_mode = 0100644
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4097
+    st_blksize = 4096
+    st_blocks = 16
+    st_atime = 0x5ce4573c
+    st_mtime = 0x5ce4573b
+    st_ctime = 0x5ce45751
+    lstat returned 0
+
+bb_access(path="/file1.txt~", mask=04)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/file1.txt~", fpath = "/home/user/Desktop/fuse/example/rootdir/file1.txt~"
+
+bb_access(path="/file1.txt~", mask=02)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/file1.txt~", fpath = "/home/user/Desktop/fuse/example/rootdir/file1.txt~"
+
+bb_access(path="/file1.txt~", mask=01)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/file1.txt~", fpath = "/home/user/Desktop/fuse/example/rootdir/file1.txt~"
+    ERROR bb_access access: Permission denied
+
+bb_getattr(path="/file2.txt", statbuf=0xb69ff104)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/file2.txt", fpath = "/home/user/Desktop/fuse/example/rootdir/file2.txt"
+    si:
+    st_dev = 2049
+    st_ino = 290153
+    st_mode = 0100644
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 8192
+    st_blksize = 4096
+    st_blocks = 16
+    st_atime = 0x5cf11963
+    st_mtime = 0x5cf1197b
+    st_ctime = 0x5cf1197b
+    lstat returned 0
+
+bb_access(path="/file2.txt", mask=04)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/file2.txt", fpath = "/home/user/Desktop/fuse/example/rootdir/file2.txt"
+
+bb_access(path="/file2.txt", mask=02)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/file2.txt", fpath = "/home/user/Desktop/fuse/example/rootdir/file2.txt"
+
+bb_access(path="/file2.txt", mask=01)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/file2.txt", fpath = "/home/user/Desktop/fuse/example/rootdir/file2.txt"
+    ERROR bb_access access: Permission denied
+
+bb_access(path="/.Trash-1000", mask=04)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/.Trash-1000", fpath = "/home/user/Desktop/fuse/example/rootdir/.Trash-1000"
+
+bb_access(path="/.Trash-1000", mask=02)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/.Trash-1000", fpath = "/home/user/Desktop/fuse/example/rootdir/.Trash-1000"
+
+bb_access(path="/.Trash-1000", mask=01)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/.Trash-1000", fpath = "/home/user/Desktop/fuse/example/rootdir/.Trash-1000"
+
+bb_releasedir(path="/", fi=0xb5fff134)
+    fi:
+    flags = 0x00000000
+    fh_old = 0xb6000eb8
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb6000eb8
+    lock_owner = 0x0000000000000000
+
+bb_open(path"/file1.txt", fi=0xb69ff1c0)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/file1.txt", fpath = "/home/user/Desktop/fuse/example/rootdir/file1.txt"
+    open returned 5
+    fi:
+    flags = 0x00008000
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/file1.txt", fpath = "/home/user/Desktop/fuse/example/rootdir/file1.txt"
+
+bb_read(path="/file1.txt", buf=0xb6a02878, size=16384, offset=0, fi=0xb73281b0)
+    fi:
+    flags = 0x00008000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+    open returned 12
+    read returned 40
+    read returned 4096
+    open returned 19
+    read returned 40
+    read returned 4096
+    open returned 20
+    read returned 40
+    read returned 4096
+    open returned 21
+    read returned 40
+    read returned 4096
+
+bb_getattr(path="/file1.txt", statbuf=0xb55ff0f4)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/file1.txt", fpath = "/home/user/Desktop/fuse/example/rootdir/file1.txt"
+    si:
+    st_dev = 2049
+    st_ino = 290152
+    st_mode = 0100644
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 16384
+    st_blksize = 4096
+    st_blocks = 32
+    st_atime = 0x5cf11963
+    st_mtime = 0x5cf1197b
+    st_ctime = 0x5cf1197b
+    lstat returned 0
+
+bb_flush(path="/file1.txt", fi=0xb5fff1c0)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0xd8c840e0c165322e
+
+bb_release(path="/file1.txt", fi=0xb73281b0)
+    fi:
+    flags = 0x00008000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/file1.txt", fpath = "/home/user/Desktop/fuse/example/rootdir/file1.txt"
+    open returned 22
+    open returned 23
+    read returned 40
+    read returned 4096
+    write returned 4096
+    open returned 23
+    read returned 40
+    read returned 4096
+    write returned 4096
+    open returned 23
+    read returned 40
+    read returned 4096
+    write returned 4096
+    open returned 23
+    read returned 40
+    read returned 4096
+    write returned 4096
+    close returned 0
+    close returned 0
+
+bb_open(path"/file2.txt", fi=0xb55ff1c0)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/file2.txt", fpath = "/home/user/Desktop/fuse/example/rootdir/file2.txt"
+    open returned 5
+    fi:
+    flags = 0x00008000
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/file2.txt", fpath = "/home/user/Desktop/fuse/example/rootdir/file2.txt"
+
+bb_read(path="/file2.txt", buf=0xb6000db0, size=8192, offset=0, fi=0xb69ff1b0)
+    fi:
+    flags = 0x00008000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+    open returned 22
+    read returned 40
+    read returned 4096
+    open returned 23
+    read returned 40
+    read returned 4096
+
+bb_getattr(path="/file2.txt", statbuf=0xb5fff0f4)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/file2.txt", fpath = "/home/user/Desktop/fuse/example/rootdir/file2.txt"
+    si:
+    st_dev = 2049
+    st_ino = 290153
+    st_mode = 0100644
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 8192
+    st_blksize = 4096
+    st_blocks = 16
+    st_atime = 0x5cf11963
+    st_mtime = 0x5cf1197b
+    st_ctime = 0x5cf1197b
+    lstat returned 0
+
+bb_flush(path="/file2.txt", fi=0xb73281c0)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0xd8c840e0c165322e
+
+bb_release(path="/file2.txt", fi=0xb55ff1b0)
+    fi:
+    flags = 0x00008000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/file2.txt", fpath = "/home/user/Desktop/fuse/example/rootdir/file2.txt"
+    open returned 24
+    open returned 25
+    read returned 40
+    read returned 4096
+    write returned 4096
+    open returned 25
+    read returned 40
+    read returned 4096
+    write returned 4096
+    close returned 0
+    close returned 0
+
+bb_open(path"/file4.txt", fi=0xb69ff1c0)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/file4.txt", fpath = "/home/user/Desktop/fuse/example/rootdir/file4.txt"
+    open returned 5
+    fi:
+    flags = 0x00008000
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/file4.txt", fpath = "/home/user/Desktop/fuse/example/rootdir/file4.txt"
+
+bb_read(path="/file4.txt", buf=0xb56006c0, size=8192, offset=0, fi=0xb5fff1b0)
+    fi:
+    flags = 0x00008000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+    open returned 24
+    read returned 40
+    read returned 4096
+    open returned 25
+    read returned 40
+    read returned 4096
+
+bb_getattr(path="/file4.txt", statbuf=0xb73280f4)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/file4.txt", fpath = "/home/user/Desktop/fuse/example/rootdir/file4.txt"
+    si:
+    st_dev = 2049
+    st_ino = 290156
+    st_mode = 0100600
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 8192
+    st_blksize = 4096
+    st_blocks = 16
+    st_atime = 0x5cf11965
+    st_mtime = 0x5cf11963
+    st_ctime = 0x5cf11963
+    lstat returned 0
+
+bb_flush(path="/file4.txt", fi=0xb55ff1c0)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0xd8c840e0c165322e
+
+bb_release(path="/file4.txt", fi=0xb69ff1b0)
+    fi:
+    flags = 0x00008000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/file4.txt", fpath = "/home/user/Desktop/fuse/example/rootdir/file4.txt"
+    open returned 26
+    open returned 27
+    read returned 40
+    read returned 4096
+    write returned 4096
+    open returned 27
+    read returned 40
+    read returned 4096
+    write returned 4096
+    close returned 0
+    close returned 0
+
+bb_getattr(path="/", statbuf=0xb5fff0f4)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/", fpath = "/home/user/Desktop/fuse/example/rootdir/"
+    si:
+    st_dev = 2049
+    st_ino = 289793
+    st_mode = 040775
+    st_nlink = 3
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x5cf11965
+    st_mtime = 0x5cf11963
+    st_ctime = 0x5cf11963
+    lstat returned 0
+
+bb_access(path="/", mask=04)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/", fpath = "/home/user/Desktop/fuse/example/rootdir/"
+
+bb_access(path="/", mask=02)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/", fpath = "/home/user/Desktop/fuse/example/rootdir/"
+
+bb_access(path="/", mask=01)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/", fpath = "/home/user/Desktop/fuse/example/rootdir/"
+
+bb_getattr(path="/", statbuf=0xb5fff0f4)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/", fpath = "/home/user/Desktop/fuse/example/rootdir/"
+    si:
+    st_dev = 2049
+    st_ino = 289793
+    st_mode = 040775
+    st_nlink = 3
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x5cf11965
+    st_mtime = 0x5cf11963
+    st_ctime = 0x5cf11963
+    lstat returned 0
+
+bb_getattr(path="/file4 .txt", statbuf=0xb7328104)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/file4 .txt", fpath = "/home/user/Desktop/fuse/example/rootdir/file4 .txt"
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+    lstat returned -1
+    ERROR lstat: No such file or directory
+
+bb_getattr(path="/file2.txt", statbuf=0xb55ff104)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/file2.txt", fpath = "/home/user/Desktop/fuse/example/rootdir/file2.txt"
+    si:
+    st_dev = 2049
+    st_ino = 290153
+    st_mode = 0100644
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 8192
+    st_blksize = 4096
+    st_blocks = 16
+    st_atime = 0x5cf11963
+    st_mtime = 0x5cf1198e
+    st_ctime = 0x5cf1198e
+    lstat returned 0
+
+bb_getattr(path="/file1.txt", statbuf=0xb69ff104)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/file1.txt", fpath = "/home/user/Desktop/fuse/example/rootdir/file1.txt"
+    si:
+    st_dev = 2049
+    st_ino = 290152
+    st_mode = 0100644
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 16384
+    st_blksize = 4096
+    st_blocks = 32
+    st_atime = 0x5cf11963
+    st_mtime = 0x5cf1198e
+    st_ctime = 0x5cf1198e
+    lstat returned 0
+
+bb_getattr(path="/", statbuf=0xb5fff0f4)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/", fpath = "/home/user/Desktop/fuse/example/rootdir/"
+    si:
+    st_dev = 2049
+    st_ino = 289793
+    st_mode = 040775
+    st_nlink = 3
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x5cf11965
+    st_mtime = 0x5cf11963
+    st_ctime = 0x5cf11963
+    lstat returned 0
+
+bb_getattr(path="/file4.txt", statbuf=0xb7328104)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/file4.txt", fpath = "/home/user/Desktop/fuse/example/rootdir/file4.txt"
+    si:
+    st_dev = 2049
+    st_ino = 290156
+    st_mode = 0100600
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 8192
+    st_blksize = 4096
+    st_blocks = 16
+    st_atime = 0x5cf11993
+    st_mtime = 0x5cf1198e
+    st_ctime = 0x5cf1198e
+    lstat returned 0
+bb_unlink(path="/file4.txt")
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/file4.txt", fpath = "/home/user/Desktop/fuse/example/rootdir/file4.txt"
+FOUND FILE
+Dont found /home/user/Desktop/fuse/example/rootdir/block2.txt 
+Dont found /home/user/Desktop/fuse/example/rootdir/block3.txt 
+block_table[0] is /home/user/Desktop/fuse/example/rootdir/block2.txt
+block_table[1] is /home/user/Desktop/fuse/example/rootdir/block3.txt
+unlink block /home/user/Desktop/fuse/example/rootdir/block2.txt
+    unlink returned 0
+unlink block /home/user/Desktop/fuse/example/rootdir/block3.txt
+    unlink returned 0
+    unlink returned 0
+
+bb_getattr(path="/", statbuf=0xb5fff0f4)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/", fpath = "/home/user/Desktop/fuse/example/rootdir/"
+    si:
+    st_dev = 2049
+    st_ino = 289793
+    st_mode = 040775
+    st_nlink = 3
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x5cf11965
+    st_mtime = 0x5cf119b2
+    st_ctime = 0x5cf119b2
+    lstat returned 0
+
+bb_access(path="/", mask=04)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/", fpath = "/home/user/Desktop/fuse/example/rootdir/"
+
+bb_access(path="/", mask=02)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/", fpath = "/home/user/Desktop/fuse/example/rootdir/"
+
+bb_access(path="/", mask=01)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/", fpath = "/home/user/Desktop/fuse/example/rootdir/"
+
+bb_getattr(path="/", statbuf=0xb5fff0f4)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/", fpath = "/home/user/Desktop/fuse/example/rootdir/"
+    si:
+    st_dev = 2049
+    st_ino = 289793
+    st_mode = 040775
+    st_nlink = 3
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x5cf119bc
+    st_mtime = 0x5cf119b2
+    st_ctime = 0x5cf119b2
+    lstat returned 0
+
+bb_access(path="/", mask=04)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/", fpath = "/home/user/Desktop/fuse/example/rootdir/"
+
+bb_access(path="/", mask=02)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/", fpath = "/home/user/Desktop/fuse/example/rootdir/"
+
+bb_access(path="/", mask=01)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/", fpath = "/home/user/Desktop/fuse/example/rootdir/"
+
+bb_opendir(path="/", fi=0xb5fff134)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/", fpath = "/home/user/Desktop/fuse/example/rootdir/"
+    opendir returned 0x0xb5608cc8
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb5608cc8
+    lock_owner = 0x0000000000000000
+
+bb_access(path="/", mask=02)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/", fpath = "/home/user/Desktop/fuse/example/rootdir/"
+
+bb_getattr(path="/.Trash", statbuf=0xb55ff104)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/.Trash", fpath = "/home/user/Desktop/fuse/example/rootdir/.Trash"
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+    lstat returned -1
+    ERROR lstat: No such file or directory
+
+bb_getattr(path="/.Trash-1000", statbuf=0xb69ff104)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/.Trash-1000", fpath = "/home/user/Desktop/fuse/example/rootdir/.Trash-1000"
+    si:
+    st_dev = 2049
+    st_ino = 289912
+    st_mode = 040700
+    st_nlink = 4
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x5ce56042
+    st_mtime = 0x5ce56042
+    st_ctime = 0x5ce56042
+    lstat returned 0
+
+bb_readdir(path="/", buf=0xb5600590, filler=0xb76d2e80, offset=0, fi=0xb5fff124)
+    readdir returned 0x0xb5608ce4
+calling filler with name test1.c~
+calling filler with name file1.txt
+calling filler with name bogus.txt~
+calling filler with name .
+calling filler with name file4.txt~
+calling filler with name file1.txt~
+calling filler with name ..
+calling filler with name file2.txt
+calling filler with name .Trash-1000
+    fi:
+    flags = 0x00000000
+    fh_old = 0xb5608cc8
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb5608cc8
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/test1.c~", statbuf=0xb55ff104)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/test1.c~", fpath = "/home/user/Desktop/fuse/example/rootdir/test1.c~"
+    si:
+    st_dev = 2049
+    st_ino = 289937
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 529
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x5ce5670f
+    st_mtime = 0x5ce5670f
+    st_ctime = 0x5ce56731
+    lstat returned 0
+
+bb_getattr(path="/.hidden", statbuf=0xb69ff104)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/.hidden", fpath = "/home/user/Desktop/fuse/example/rootdir/.hidden"
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+    lstat returned -1
+    ERROR lstat: No such file or directory
+
+bb_access(path="/test1.c~", mask=04)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/test1.c~", fpath = "/home/user/Desktop/fuse/example/rootdir/test1.c~"
+
+bb_access(path="/test1.c~", mask=02)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/test1.c~", fpath = "/home/user/Desktop/fuse/example/rootdir/test1.c~"
+
+bb_access(path="/test1.c~", mask=01)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/test1.c~", fpath = "/home/user/Desktop/fuse/example/rootdir/test1.c~"
+    ERROR bb_access access: Permission denied
+
+bb_getattr(path="/", statbuf=0xb69ff0f4)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/", fpath = "/home/user/Desktop/fuse/example/rootdir/"
+    si:
+    st_dev = 2049
+    st_ino = 289793
+    st_mode = 040775
+    st_nlink = 3
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x5cf119bc
+    st_mtime = 0x5cf119b2
+    st_ctime = 0x5cf119b2
+    lstat returned 0
+
+bb_getattr(path="/file1.txt", statbuf=0xb5fff104)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/file1.txt", fpath = "/home/user/Desktop/fuse/example/rootdir/file1.txt"
+    si:
+    st_dev = 2049
+    st_ino = 290152
+    st_mode = 0100644
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 16384
+    st_blksize = 4096
+    st_blocks = 32
+    st_atime = 0x5cf11963
+    st_mtime = 0x5cf1198e
+    st_ctime = 0x5cf1198e
+    lstat returned 0
+
+bb_access(path="/file1.txt", mask=04)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/file1.txt", fpath = "/home/user/Desktop/fuse/example/rootdir/file1.txt"
+
+bb_access(path="/file1.txt", mask=02)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/file1.txt", fpath = "/home/user/Desktop/fuse/example/rootdir/file1.txt"
+
+bb_access(path="/file1.txt", mask=01)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/file1.txt", fpath = "/home/user/Desktop/fuse/example/rootdir/file1.txt"
+    ERROR bb_access access: Permission denied
+
+bb_getattr(path="/bogus.txt~", statbuf=0xb5fff104)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/bogus.txt~", fpath = "/home/user/Desktop/fuse/example/rootdir/bogus.txt~"
+    si:
+    st_dev = 2049
+    st_ino = 289813
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 11
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x5ce455e6
+    st_mtime = 0x5ce455cd
+    st_ctime = 0x5ce45785
+    lstat returned 0
+
+bb_access(path="/bogus.txt~", mask=04)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/bogus.txt~", fpath = "/home/user/Desktop/fuse/example/rootdir/bogus.txt~"
+
+bb_access(path="/bogus.txt~", mask=02)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/bogus.txt~", fpath = "/home/user/Desktop/fuse/example/rootdir/bogus.txt~"
+
+bb_access(path="/bogus.txt~", mask=01)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/bogus.txt~", fpath = "/home/user/Desktop/fuse/example/rootdir/bogus.txt~"
+    ERROR bb_access access: Permission denied
+
+bb_getattr(path="/file4.txt~", statbuf=0xb5fff104)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/file4.txt~", fpath = "/home/user/Desktop/fuse/example/rootdir/file4.txt~"
+    si:
+    st_dev = 2049
+    st_ino = 290160
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 4096
+    st_blocks = 0
+    st_atime = 0x5cf10ca9
+    st_mtime = 0x5cf10c9c
+    st_ctime = 0x5cf10cb5
+    lstat returned 0
+
+bb_access(path="/file4.txt~", mask=04)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/file4.txt~", fpath = "/home/user/Desktop/fuse/example/rootdir/file4.txt~"
+
+bb_access(path="/file4.txt~", mask=02)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/file4.txt~", fpath = "/home/user/Desktop/fuse/example/rootdir/file4.txt~"
+
+bb_access(path="/file4.txt~", mask=01)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/file4.txt~", fpath = "/home/user/Desktop/fuse/example/rootdir/file4.txt~"
+    ERROR bb_access access: Permission denied
+
+bb_getattr(path="/file1.txt~", statbuf=0xb5fff104)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/file1.txt~", fpath = "/home/user/Desktop/fuse/example/rootdir/file1.txt~"
+    si:
+    st_dev = 2049
+    st_ino = 289828
+    st_mode = 0100644
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4097
+    st_blksize = 4096
+    st_blocks = 16
+    st_atime = 0x5ce4573c
+    st_mtime = 0x5ce4573b
+    st_ctime = 0x5ce45751
+    lstat returned 0
+
+bb_access(path="/file1.txt~", mask=04)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/file1.txt~", fpath = "/home/user/Desktop/fuse/example/rootdir/file1.txt~"
+
+bb_access(path="/file1.txt~", mask=02)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/file1.txt~", fpath = "/home/user/Desktop/fuse/example/rootdir/file1.txt~"
+
+bb_access(path="/file1.txt~", mask=01)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/file1.txt~", fpath = "/home/user/Desktop/fuse/example/rootdir/file1.txt~"
+    ERROR bb_access access: Permission denied
+
+bb_getattr(path="/file2.txt", statbuf=0xb5fff104)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/file2.txt", fpath = "/home/user/Desktop/fuse/example/rootdir/file2.txt"
+    si:
+    st_dev = 2049
+    st_ino = 290153
+    st_mode = 0100644
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 8192
+    st_blksize = 4096
+    st_blocks = 16
+    st_atime = 0x5cf11963
+    st_mtime = 0x5cf1198e
+    st_ctime = 0x5cf1198e
+    lstat returned 0
+
+bb_access(path="/file2.txt", mask=04)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/file2.txt", fpath = "/home/user/Desktop/fuse/example/rootdir/file2.txt"
+
+bb_access(path="/file2.txt", mask=02)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/file2.txt", fpath = "/home/user/Desktop/fuse/example/rootdir/file2.txt"
+
+bb_access(path="/file2.txt", mask=01)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/file2.txt", fpath = "/home/user/Desktop/fuse/example/rootdir/file2.txt"
+    ERROR bb_access access: Permission denied
+
+bb_access(path="/.Trash-1000", mask=04)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/.Trash-1000", fpath = "/home/user/Desktop/fuse/example/rootdir/.Trash-1000"
+
+bb_access(path="/.Trash-1000", mask=02)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/.Trash-1000", fpath = "/home/user/Desktop/fuse/example/rootdir/.Trash-1000"
+
+bb_access(path="/.Trash-1000", mask=01)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/.Trash-1000", fpath = "/home/user/Desktop/fuse/example/rootdir/.Trash-1000"
+
+bb_releasedir(path="/", fi=0xb5fff134)
+    fi:
+    flags = 0x00000000
+    fh_old = 0xb5608cc8
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb5608cc8
+    lock_owner = 0x0000000000000000
+
+bb_open(path"/file1.txt", fi=0xb73281c0)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/file1.txt", fpath = "/home/user/Desktop/fuse/example/rootdir/file1.txt"
+    open returned 5
+    fi:
+    flags = 0x00008000
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/file1.txt", fpath = "/home/user/Desktop/fuse/example/rootdir/file1.txt"
+
+bb_read(path="/file1.txt", buf=0xb4c027c8, size=16384, offset=0, fi=0xb55ff1b0)
+    fi:
+    flags = 0x00008000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+    open returned 26
+    read returned 40
+    read returned 4096
+    open returned 27
+    read returned 40
+    read returned 4096
+    open returned 28
+    read returned 40
+    read returned 4096
+    open returned 29
+    read returned 40
+    read returned 4096
+
+bb_getattr(path="/file1.txt", statbuf=0xb69ff0f4)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/file1.txt", fpath = "/home/user/Desktop/fuse/example/rootdir/file1.txt"
+    si:
+    st_dev = 2049
+    st_ino = 290152
+    st_mode = 0100644
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 16384
+    st_blksize = 4096
+    st_blocks = 32
+    st_atime = 0x5cf11963
+    st_mtime = 0x5cf1198e
+    st_ctime = 0x5cf1198e
+    lstat returned 0
+
+bb_flush(path="/file1.txt", fi=0xb5fff1c0)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0xd8c840e0c165322e
+
+bb_release(path="/file1.txt", fi=0xb73281b0)
+    fi:
+    flags = 0x00008000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/file1.txt", fpath = "/home/user/Desktop/fuse/example/rootdir/file1.txt"
+    open returned 30
+    open returned 31
+    read returned 40
+    read returned 4096
+    write returned 4096
+    open returned 31
+    read returned 40
+    read returned 4096
+    write returned 4096
+    open returned 31
+    read returned 40
+    read returned 4096
+    write returned 4096
+    open returned 31
+    read returned 40
+    read returned 4096
+    write returned 4096
+    close returned 0
+    close returned 0
+
+bb_open(path"/file2.txt", fi=0xb55ff1c0)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/file2.txt", fpath = "/home/user/Desktop/fuse/example/rootdir/file2.txt"
+    open returned 5
+    fi:
+    flags = 0x00008000
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/file2.txt", fpath = "/home/user/Desktop/fuse/example/rootdir/file2.txt"
+
+bb_read(path="/file2.txt", buf=0xb6000db0, size=8192, offset=0, fi=0xb69ff1b0)
+    fi:
+    flags = 0x00008000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+    open returned 30
+    read returned 40
+    read returned 4096
+    open returned 31
+    read returned 40
+    read returned 4096
+
+bb_getattr(path="/file2.txt", statbuf=0xb5fff0f4)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/file2.txt", fpath = "/home/user/Desktop/fuse/example/rootdir/file2.txt"
+    si:
+    st_dev = 2049
+    st_ino = 290153
+    st_mode = 0100644
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 8192
+    st_blksize = 4096
+    st_blocks = 16
+    st_atime = 0x5cf11963
+    st_mtime = 0x5cf1198e
+    st_ctime = 0x5cf1198e
+    lstat returned 0
+
+bb_flush(path="/file2.txt", fi=0xb73281c0)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0xd8c840e0c165322e
+
+bb_release(path="/file2.txt", fi=0xb55ff1b0)
+    fi:
+    flags = 0x00008000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/file2.txt", fpath = "/home/user/Desktop/fuse/example/rootdir/file2.txt"
+    open returned 32
+    open returned 33
+    read returned 40
+    read returned 4096
+    write returned 4096
+    open returned 33
+    read returned 40
+    read returned 4096
+    write returned 4096
+    close returned 0
+    close returned 0
+
+bb_getattr(path="/", statbuf=0xb69ff0f4)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/", fpath = "/home/user/Desktop/fuse/example/rootdir/"
+    si:
+    st_dev = 2049
+    st_ino = 289793
+    st_mode = 040775
+    st_nlink = 3
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x5cf119bc
+    st_mtime = 0x5cf119b2
+    st_ctime = 0x5cf119b2
+    lstat returned 0
+
+bb_access(path="/", mask=04)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/", fpath = "/home/user/Desktop/fuse/example/rootdir/"
+
+bb_access(path="/", mask=02)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/", fpath = "/home/user/Desktop/fuse/example/rootdir/"
+
+bb_access(path="/", mask=01)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/", fpath = "/home/user/Desktop/fuse/example/rootdir/"
+
+bb_getattr(path="/file4 .txt", statbuf=0xb69ff104)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/file4 .txt", fpath = "/home/user/Desktop/fuse/example/rootdir/file4 .txt"
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+    lstat returned -1
+    ERROR lstat: No such file or directory
+
+bb_getattr(path="/file2.txt", statbuf=0xb5fff104)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/file2.txt", fpath = "/home/user/Desktop/fuse/example/rootdir/file2.txt"
+    si:
+    st_dev = 2049
+    st_ino = 290153
+    st_mode = 0100644
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 8192
+    st_blksize = 4096
+    st_blocks = 16
+    st_atime = 0x5cf11963
+    st_mtime = 0x5cf119c4
+    st_ctime = 0x5cf119c4
+    lstat returned 0
+
+bb_getattr(path="/file1.txt", statbuf=0xb7328104)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/file1.txt", fpath = "/home/user/Desktop/fuse/example/rootdir/file1.txt"
+    si:
+    st_dev = 2049
+    st_ino = 290152
+    st_mode = 0100644
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 16384
+    st_blksize = 4096
+    st_blocks = 32
+    st_atime = 0x5cf119da
+    st_mtime = 0x5cf119c4
+    st_ctime = 0x5cf119c4
+    lstat returned 0
+
+bb_getattr(path="/", statbuf=0xb55ff0f4)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/", fpath = "/home/user/Desktop/fuse/example/rootdir/"
+    si:
+    st_dev = 2049
+    st_ino = 289793
+    st_mode = 040775
+    st_nlink = 3
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x5cf119bc
+    st_mtime = 0x5cf11a05
+    st_ctime = 0x5cf11a05
+    lstat returned 0
+
+bb_access(path="/", mask=04)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/", fpath = "/home/user/Desktop/fuse/example/rootdir/"
+
+bb_access(path="/", mask=02)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/", fpath = "/home/user/Desktop/fuse/example/rootdir/"
+
+bb_access(path="/", mask=01)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/", fpath = "/home/user/Desktop/fuse/example/rootdir/"
+
+bb_getattr(path="/file4 .txt", statbuf=0xb55ff104)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/file4 .txt", fpath = "/home/user/Desktop/fuse/example/rootdir/file4 .txt"
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+    lstat returned -1
+    ERROR lstat: No such file or directory
+
+bb_getattr(path="/file2.txt", statbuf=0xb69ff104)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/file2.txt", fpath = "/home/user/Desktop/fuse/example/rootdir/file2.txt"
+    si:
+    st_dev = 2049
+    st_ino = 290153
+    st_mode = 0100644
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 8192
+    st_blksize = 4096
+    st_blocks = 16
+    st_atime = 0x5cf11963
+    st_mtime = 0x5cf119c4
+    st_ctime = 0x5cf119c4
+    lstat returned 0
+
+bb_getattr(path="/file1.txt", statbuf=0xb5fff104)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/file1.txt", fpath = "/home/user/Desktop/fuse/example/rootdir/file1.txt"
+    si:
+    st_dev = 2049
+    st_ino = 290152
+    st_mode = 0100644
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 16384
+    st_blksize = 4096
+    st_blocks = 32
+    st_atime = 0x5cf119da
+    st_mtime = 0x5cf119c4
+    st_ctime = 0x5cf119c4
+    lstat returned 0
+
+bb_getattr(path="/", statbuf=0xb73280f4)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/", fpath = "/home/user/Desktop/fuse/example/rootdir/"
+    si:
+    st_dev = 2049
+    st_ino = 289793
+    st_mode = 040775
+    st_nlink = 3
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x5cf11a08
+    st_mtime = 0x5cf11a05
+    st_ctime = 0x5cf11a05
+    lstat returned 0
+
+bb_getattr(path="/", statbuf=0xb55ff0f4)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/", fpath = "/home/user/Desktop/fuse/example/rootdir/"
+    si:
+    st_dev = 2049
+    st_ino = 289793
+    st_mode = 040775
+    st_nlink = 3
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x5cf11a08
+    st_mtime = 0x5cf11a05
+    st_ctime = 0x5cf11a05
+    lstat returned 0
+
+bb_getattr(path="/file2.txt", statbuf=0xb69ff104)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/file2.txt", fpath = "/home/user/Desktop/fuse/example/rootdir/file2.txt"
+    si:
+    st_dev = 2049
+    st_ino = 290153
+    st_mode = 0100644
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 8192
+    st_blksize = 4096
+    st_blocks = 16
+    st_atime = 0x5cf11963
+    st_mtime = 0x5cf119c4
+    st_ctime = 0x5cf119c4
+    lstat returned 0
+
+bb_getattr(path="/file2.txt", statbuf=0xb5fff104)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/file2.txt", fpath = "/home/user/Desktop/fuse/example/rootdir/file2.txt"
+    si:
+    st_dev = 2049
+    st_ino = 290153
+    st_mode = 0100644
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 8192
+    st_blksize = 4096
+    st_blocks = 16
+    st_atime = 0x5cf11963
+    st_mtime = 0x5cf119c4
+    st_ctime = 0x5cf119c4
+    lstat returned 0
+
+bb_open(path"/file2.txt", fi=0xb73281c0)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/file2.txt", fpath = "/home/user/Desktop/fuse/example/rootdir/file2.txt"
+    open returned 5
+    fi:
+    flags = 0x00008000
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/file2.txt", fpath = "/home/user/Desktop/fuse/example/rootdir/file2.txt"
+
+bb_read(path="/file2.txt", buf=0xb4c027c8, size=8192, offset=0, fi=0xb55ff1b0)
+    fi:
+    flags = 0x00008000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+    open returned 32
+    read returned 40
+    read returned 4096
+    open returned 33
+    read returned 40
+    read returned 4096
+
+bb_fgetattr(path="/file2.txt", statbuf=0xb69ff0f4, fi=0xb69ff1c0)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+    si:
+    st_dev = 2049
+    st_ino = 290153
+    st_mode = 0100644
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 8192
+    st_blksize = 4096
+    st_blocks = 16
+    st_atime = 0x5cf11a2e
+    st_mtime = 0x5cf119c4
+    st_ctime = 0x5cf119c4
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/file2.txt", fpath = "/home/user/Desktop/fuse/example/rootdir/file2.txt"
+
+bb_read(path="/file2.txt", buf=0xb56006c0, size=4096, offset=8192, fi=0xb5fff1b0)
+    fi:
+    flags = 0x00008000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+    pread returned 0
+
+bb_fgetattr(path="/file2.txt", statbuf=0xb73280f4, fi=0xb73281c0)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+    si:
+    st_dev = 2049
+    st_ino = 290153
+    st_mode = 0100644
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 8192
+    st_blksize = 4096
+    st_blocks = 16
+    st_atime = 0x5cf11a2e
+    st_mtime = 0x5cf119c4
+    st_ctime = 0x5cf119c4
+
+bb_flush(path="/file2.txt", fi=0xb55ff1c0)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x904198366bd5b132
+
+bb_release(path="/file2.txt", fi=0xb69ff1b0)
+    fi:
+    flags = 0x00008000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/file2.txt", fpath = "/home/user/Desktop/fuse/example/rootdir/file2.txt"
+    open returned 34
+    open returned 35
+    read returned 40
+    read returned 4096
+    write returned 4096
+    open returned 35
+    read returned 40
+    read returned 4096
+    write returned 4096
+    close returned 0
+    close returned 0
+
+bb_getattr(path="/file1.txt", statbuf=0xb5fff104)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/file1.txt", fpath = "/home/user/Desktop/fuse/example/rootdir/file1.txt"
+    si:
+    st_dev = 2049
+    st_ino = 290152
+    st_mode = 0100644
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 16384
+    st_blksize = 4096
+    st_blocks = 32
+    st_atime = 0x5cf119da
+    st_mtime = 0x5cf119c4
+    st_ctime = 0x5cf119c4
+    lstat returned 0
+
+bb_open(path"/file1.txt", fi=0xb73281c0)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/file1.txt", fpath = "/home/user/Desktop/fuse/example/rootdir/file1.txt"
+    open returned 5
+    fi:
+    flags = 0x00008000
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/file1.txt", fpath = "/home/user/Desktop/fuse/example/rootdir/file1.txt"
+
+bb_read(path="/file1.txt", buf=0xb4c027c8, size=16384, offset=0, fi=0xb55ff1b0)
+    fi:
+    flags = 0x00008000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+    open returned 34
+    read returned 40
+    read returned 4096
+    open returned 35
+    read returned 40
+    read returned 4096
+    open returned 36
+    read returned 40
+    read returned 4096
+    open returned 37
+    read returned 40
+    read returned 4096
+
+bb_fgetattr(path="/file1.txt", statbuf=0xb69ff0f4, fi=0xb69ff1c0)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+    si:
+    st_dev = 2049
+    st_ino = 290152
+    st_mode = 0100644
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 16384
+    st_blksize = 4096
+    st_blocks = 32
+    st_atime = 0x5cf119da
+    st_mtime = 0x5cf119c4
+    st_ctime = 0x5cf119c4
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/file1.txt", fpath = "/home/user/Desktop/fuse/example/rootdir/file1.txt"
+
+bb_read(path="/file1.txt", buf=0xb56006c0, size=4096, offset=16384, fi=0xb5fff1b0)
+    fi:
+    flags = 0x00008000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+    pread returned 0
+
+bb_fgetattr(path="/file1.txt", statbuf=0xb73280f4, fi=0xb73281c0)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+    si:
+    st_dev = 2049
+    st_ino = 290152
+    st_mode = 0100644
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 16384
+    st_blksize = 4096
+    st_blocks = 32
+    st_atime = 0x5cf119da
+    st_mtime = 0x5cf119c4
+    st_ctime = 0x5cf119c4
+
+bb_flush(path="/file1.txt", fi=0xb55ff1c0)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0xc98b5d9577df7f38
+
+bb_release(path="/file1.txt", fi=0xb69ff1b0)
+    fi:
+    flags = 0x00008000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/file1.txt", fpath = "/home/user/Desktop/fuse/example/rootdir/file1.txt"
+    open returned 38
+    open returned 39
+    read returned 40
+    read returned 4096
+    write returned 4096
+    open returned 39
+    read returned 40
+    read returned 4096
+    write returned 4096
+    open returned 39
+    read returned 40
+    read returned 4096
+    write returned 4096
+    open returned 39
+    read returned 40
+    read returned 4096
+    write returned 4096
+    close returned 0
+    close returned 0
+
+bb_getattr(path="/file4 .txt", statbuf=0xb5fff104)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/file4 .txt", fpath = "/home/user/Desktop/fuse/example/rootdir/file4 .txt"
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+    lstat returned -1
+    ERROR lstat: No such file or directory
+
+bb_getattr(path="/file2.txt", statbuf=0xb7328104)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/file2.txt", fpath = "/home/user/Desktop/fuse/example/rootdir/file2.txt"
+    si:
+    st_dev = 2049
+    st_ino = 290153
+    st_mode = 0100644
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 8192
+    st_blksize = 4096
+    st_blocks = 16
+    st_atime = 0x5cf11a2e
+    st_mtime = 0x5cf11a2e
+    st_ctime = 0x5cf11a2e
+    lstat returned 0
+
+bb_getattr(path="/file1.txt", statbuf=0xb55ff104)
+    bb_fullpath:  rootdir = "/home/user/Desktop/fuse/example/rootdir", path = "/file1.txt", fpath = "/home/user/Desktop/fuse/example/rootdir/file1.txt"
+    si:
+    st_dev = 2049
+    st_ino = 290152
+    st_mode = 0100644
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 16384
+    st_blksize = 4096
+    st_blocks = 32
+    st_atime = 0x5cf119da
+    st_mtime = 0x5cf11a34
+    st_ctime = 0x5cf11a34
+    lstat returned 0
+
+bb_destroy(userdata=0x09f4a008)
